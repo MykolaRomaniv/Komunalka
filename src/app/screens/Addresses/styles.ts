@@ -1,5 +1,6 @@
 import colors from 'constants/colors'
 import { StyleSheet } from 'react-native'
+import { height } from 'services/dimensions'
 
 const styles = StyleSheet.create({
   page: {
@@ -23,11 +24,12 @@ const styles = StyleSheet.create({
   },
   background: {
     width: '100%',
+    height,
     flex: 1,
   },
   iconsRow: {
+    marginVertical: 12,
     flexDirection: 'row',
-    backgroundColor: 'red',
     justifyContent: 'space-between',
     width: '35%',
     alignSelf: 'flex-end',
