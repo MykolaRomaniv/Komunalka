@@ -41,6 +41,7 @@ export type AppStackParamList = {
   Main: undefined
   Addresses: undefined
   Counters: undefined
+  Statistic: undefined
 }
 
 export type AnimatedViewStyle =

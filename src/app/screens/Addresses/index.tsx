@@ -7,7 +7,7 @@ import { AppStackParamList } from 'types'
 import ContentView from './view'
 
 interface AddressesProps {
-  navigation: StackNavigationProp<AppStackParamList, 'Main'>
+  navigation: StackNavigationProp<AppStackParamList, 'Addresses'>
 }
 
 const Addresses = ({ navigation }: AddressesProps) => (

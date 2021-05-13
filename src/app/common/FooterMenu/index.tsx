@@ -28,7 +28,7 @@ const FooterMenu = ({ navigation: { navigate } }: FooterMenuProps) => (
       icon={graph}
       iconStyle={styles.graphIcon}
       text="Статистика"
-      onPress={() => navigate('Main')}
+      onPress={() => navigate('Statistic')}
     />
     <FooterItem
       icon={notification}
