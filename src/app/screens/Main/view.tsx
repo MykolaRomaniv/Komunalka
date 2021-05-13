@@ -1,43 +1,58 @@
 import MainMenuItems from 'components/MainMenuItems'
+import PaymentHistoryItem from 'components/PaymentHistoryItem'
+import colors from 'constants/colors'
 import React from 'react'
 import { Text, View } from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler'
+import LinearGradient from 'react-native-linear-gradient'
+
+import styles from './styles'
 
 const ContentView = () => (
-  <View>
-    <Text>{'Привіт, Педро'}</Text>
-    <View>{'NA'}</View>
-    <View>
-      <Text>{'Сплатити до:'}</Text>
-      <Text>{'24'}</Text>
-      <Text>{'Квітня'}</Text>
+  <ScrollView style={styles.page}>
+    <View style={styles.header}>
+      <Text style={styles.userName}>{'Привіт, Педро'}</Text>
+      <LinearGradient
+        colors={[colors.electricViolet, colors.torchRed]}
+        style={styles.userCircle}
+      >
+        <Text style={styles.userCircleText}>{'NA'}</Text>
+      </LinearGradient>
     </View>
-    <View>
-      <Text>{'Всього до оплати:'}</Text>
-      <Text>{'1250 UAH'}</Text>
-      <View>
-        <Text>{'-20.30 UAH/-15%'}</Text>
+    <View style={styles.paymentSection}>
+      <LinearGradient
+        colors={[colors.orangeWhite, colors.orangePeel, colors.transparent]}
+        style={styles.payToContainer}
+      >
+        <Text style={styles.payToText}>{'Сплатити до:'}</Text>
+        <Text style={styles.payDayText}>{'24'}</Text>
+        <Text style={styles.payMonth}>{'Квітня'}</Text>
+      </LinearGradient>
+      <View style={styles.toPayContainer}>
+        <Text style={styles.toPayText}>{'Всього до оплати:'}</Text>
+        <Text style={styles.payAmount}>{'1250 UAH'}</Text>
+        <View style={styles.payRateContainer}>
+          <Text style={styles.payRate}>{'-20.30 UAH/-15%'}</Text>
+        </View>
+        <Text style={styles.lastMonth}>{'минулий місяць'}</Text>
       </View>
-      <View>
-        <Text>{'минулий місяць'}</Text>
+    </View>
+    <View style={styles.menuItemsContainer}>
+      <View style={styles.row}>
+        <MainMenuItems title="Оплатити комуналку" />
+        <MainMenuItems title="Адреси" />
+      </View>
+      <View style={styles.row}>
+        <MainMenuItems title="Статистика" />
+        <MainMenuItems title="Нагадування" />
       </View>
     </View>
-    <View>
-      <MainMenuItems title="Оплатити комуналку" />
-      <MainMenuItems title="Адреси" />
-      <MainMenuItems title="Статистика" />
-      <MainMenuItems title="Нагадування" />
-    </View>
-    <View>
-      <Text>{'Історія платежів:'}</Text>
-    </View>
-    <Text>{'КФ ПАТ КБП”ПРИВАТБАНК”'}</Text>
-    <Text>{'Платник'}</Text>
-    <Text>{'Григорак Ілона Анатоліївна'}</Text>
-    <Text>{'Дата оплати'}</Text>
-    <Text>{'20.04.2021'}</Text>
-    <Text>{'Дата обробки'}</Text>
-    <Text>{'21.04.2021'}</Text>
-  </View>
+    <Text style={styles.paymentHistoryTitle}>{'Історія платежів:'}</Text>
+    <PaymentHistoryItem />
+    <PaymentHistoryItem />
+    <PaymentHistoryItem />
+    <PaymentHistoryItem />
+  </ScrollView>
 )
 
 export default ContentView
