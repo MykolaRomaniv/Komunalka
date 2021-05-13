@@ -39,6 +39,7 @@ export type IError<T = { errors: string[] }> =
 
 export type AppStackParamList = {
   Main: undefined
+  Addresses: undefined
 }
 
 export type AnimatedViewStyle =

@@ -5,6 +5,7 @@ import {
 } from '@react-navigation/stack'
 import React from 'react'
 import { connect } from 'react-redux'
+import Addresses from 'screens/Addresses'
 import Main from 'screens/Main'
 import { AppStackParamList, ReduxState } from 'types'
 
@@ -24,8 +25,10 @@ const AppNavigator = () => (
         headerShown: false,
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}
+      initialRouteName="Addresses"
     >
       <Stack.Screen name="Main" component={Main} />
+      <Stack.Screen name="Addresses" component={Addresses} />
     </Stack.Navigator>
   </NavigationContainer>
 )
