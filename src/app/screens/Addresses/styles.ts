@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
   },
   headerText: {
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik-Light',
     fontWeight: '300',
     fontSize: 20,
     lineHeight: 26,

@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   userName: {
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik-Light',
     fontWeight: '300',
     fontSize: 20,
     lineHeight: 26,
@@ -27,20 +27,20 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   payToText: {
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik-Regular',
     fontSize: 10,
     lineHeight: 12,
     color: colors.black,
   },
   payDayText: {
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik-Light',
     fontWeight: '300',
     fontSize: 36,
     lineHeight: 43,
     color: colors.black,
   },
   payMonth: {
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik-Regular',
     fontSize: 14,
     lineHeight: 17,
     color: colors.black,
@@ -55,13 +55,13 @@ const styles = StyleSheet.create({
     width: '30%',
   },
   toPayText: {
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik-Regular',
     fontSize: 10,
     lineHeight: 12,
     color: colors.woodsmoke,
   },
   payAmount: {
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik-Medium',
     fontWeight: '500',
     fontSize: 20,
     lineHeight: 26,
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     paddingRight: 40,
   },
   paymentHistoryTitle: {
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik-Medium',
     fontWeight: '500',
     fontSize: 14,
     lineHeight: 18,

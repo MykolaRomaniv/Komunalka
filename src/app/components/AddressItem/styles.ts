@@ -18,13 +18,13 @@ const styles = StyleSheet.create({
     height: 53,
   },
   addressText: {
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik-Regular',
     fontSize: 14,
     lineHeight: 17,
     color: colors.woodsmoke,
   },
   cityText: {
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik-Light',
     fontWeight: '300',
     fontSize: 12,
     lineHeight: 14,
