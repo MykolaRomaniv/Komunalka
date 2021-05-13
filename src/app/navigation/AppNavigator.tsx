@@ -25,7 +25,6 @@ const AppNavigator = () => (
         headerShown: false,
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}
-      initialRouteName="Addresses"
     >
       <Stack.Screen name="Main" component={Main} />
       <Stack.Screen name="Addresses" component={Addresses} />
