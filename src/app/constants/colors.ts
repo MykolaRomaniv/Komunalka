@@ -3,6 +3,7 @@ export default {
   romance: '#FFFEFD',
   orangeWhite: '#FEF7EC',
   osloGray: '#8F9090',
+  midGray: '#5F5F71',
   doveGray: '#616161',
   capeCod: '#313333',
   black: '#000000',
