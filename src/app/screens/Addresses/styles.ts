@@ -7,21 +7,6 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: colors.white,
   },
-  headerText: {
-    fontFamily: 'Rubik-Light',
-    fontWeight: '300',
-    fontSize: 20,
-    lineHeight: 26,
-    color: colors.black,
-    opacity: 0.87,
-    marginLeft: 20,
-    marginTop: 16,
-  },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 12,
-  },
   background: {
     width: '100%',
     height,

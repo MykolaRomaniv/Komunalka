@@ -1,6 +1,6 @@
+import Header from 'common/Header'
 import MainMenuItems from 'components/MainMenuItems'
 import PaymentHistoryItem from 'components/PaymentHistoryItem'
-import UserCircle from 'components/UserCircle'
 import colors from 'constants/colors'
 import React from 'react'
 import { Text, View } from 'react-native'
@@ -11,10 +11,7 @@ import styles from './styles'
 
 const ContentView = () => (
   <ScrollView style={styles.page}>
-    <View style={styles.header}>
-      <Text style={styles.userName}>{'Привіт, Педро'}</Text>
-      <UserCircle />
-    </View>
+    <Header>{'Привіт, Педро'}</Header>
     <View style={styles.paymentSection}>
       <LinearGradient
         colors={[colors.orangeWhite, colors.orangePeel, colors.transparent]}

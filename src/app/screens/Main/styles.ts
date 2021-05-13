@@ -3,22 +3,8 @@ import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
   page: {
-    paddingLeft: 19,
     backgroundColor: colors.white,
     height: '100%',
-  },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  userName: {
-    fontFamily: 'Rubik-Light',
-    fontWeight: '300',
-    fontSize: 20,
-    lineHeight: 26,
-    opacity: 0.87,
-    color: colors.black,
-    marginTop: 16,
   },
   payToContainer: {
     width: 109,
@@ -49,6 +35,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 10,
+    marginLeft: 19,
   },
   toPayContainer: {
     marginRight: 29,
@@ -99,6 +86,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     marginBottom: 40,
+    marginLeft: 19,
   },
   row: {
     flexDirection: 'row',

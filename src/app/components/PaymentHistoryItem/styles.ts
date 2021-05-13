@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     // box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15),
     elevation: 3,
     borderRadius: 45,
-    marginLeft: -19,
     paddingLeft: 19,
     paddingRight: 36,
     paddingBottom: 5,
