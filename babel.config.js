@@ -7,6 +7,7 @@ module.exports = {
         root: ['./src'],
         alias: {
           boot: './src/app/boot',
+          common: './src/app/common',
           components: './src/app/components',
           constants: './src/app/constants',
           config: './src/app/config',

@@ -60,6 +60,7 @@
     "baseUrl": "./src/app/",
     "paths": {
       "boot": ["./boot"],
+      "common": ["./common"],
       "components": ["./components"],
       "constants": ["./constants"],
       "config": ["./config"],
