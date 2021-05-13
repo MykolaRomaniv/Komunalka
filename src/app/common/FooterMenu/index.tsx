@@ -46,7 +46,7 @@ const FooterMenu = ({ navigation: { navigate } }: FooterMenuProps) => (
       icon={person}
       iconStyle={styles.personIcon}
       text="Лічильники"
-      onPress={() => navigate('Main')}
+      onPress={() => navigate('Counters')}
     />
   </View>
 )

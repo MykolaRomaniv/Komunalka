@@ -6,6 +6,7 @@ import {
 import React from 'react'
 import { connect } from 'react-redux'
 import Addresses from 'screens/Addresses'
+import Counters from 'screens/Counters'
 import Main from 'screens/Main'
 import { AppStackParamList, ReduxState } from 'types'
 
@@ -28,6 +29,7 @@ const AppNavigator = () => (
     >
       <Stack.Screen name="Main" component={Main} />
       <Stack.Screen name="Addresses" component={Addresses} />
+      <Stack.Screen name="Counters" component={Counters} />
     </Stack.Navigator>
   </NavigationContainer>
 )
