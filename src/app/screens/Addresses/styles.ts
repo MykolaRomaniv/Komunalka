@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   iconsRow: {
+    marginRight: 26,
     marginVertical: 12,
     flexDirection: 'row',
     justifyContent: 'space-between',

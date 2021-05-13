@@ -2,6 +2,7 @@ import addressesBg from 'assets/addressesBg.png'
 import add from 'assets/icons/add.png'
 import trash from 'assets/icons/trash.png'
 import AddressItem from 'components/AddressItem'
+import Touchable from 'components/Touchable'
 import UserCircle from 'components/UserCircle'
 import React from 'react'
 import { Image, ImageBackground, Text, View } from 'react-native'
@@ -17,8 +18,12 @@ const ContentView = () => (
     </View>
     <ImageBackground source={addressesBg} style={styles.background}>
       <View style={styles.iconsRow}>
-        <Image source={trash} style={styles.trashIcon} />
-        <Image source={add} style={styles.addIcon} />
+        <Touchable>
+          <Image source={trash} style={styles.trashIcon} />
+        </Touchable>
+        <Touchable>
+          <Image source={add} style={styles.addIcon} />
+        </Touchable>
       </View>
       <AddressItem address="Вулиця Лукаша, 54, 8" city="м. Львів" selected />
       <AddressItem address="Вулиця Лукаша, 54, 8" city="м. Львів" />
