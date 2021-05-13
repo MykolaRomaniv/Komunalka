@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     paddingLeft: 19,
     paddingRight: 36,
     paddingBottom: 5,
-    paddingTop: 8,
+    paddingTop: 27,
     marginBottom: 10,
   },
   bankName: {
