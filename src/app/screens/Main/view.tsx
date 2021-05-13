@@ -1,5 +1,6 @@
 import MainMenuItems from 'components/MainMenuItems'
 import PaymentHistoryItem from 'components/PaymentHistoryItem'
+import UserCircle from 'components/UserCircle'
 import colors from 'constants/colors'
 import React from 'react'
 import { Text, View } from 'react-native'
@@ -12,12 +13,7 @@ const ContentView = () => (
   <ScrollView style={styles.page}>
     <View style={styles.header}>
       <Text style={styles.userName}>{'Привіт, Педро'}</Text>
-      <LinearGradient
-        colors={[colors.electricViolet, colors.torchRed]}
-        style={styles.userCircle}
-      >
-        <Text style={styles.userCircleText}>{'NA'}</Text>
-      </LinearGradient>
+      <UserCircle />
     </View>
     <View style={styles.paymentSection}>
       <LinearGradient

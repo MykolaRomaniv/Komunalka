@@ -20,22 +20,6 @@ const styles = StyleSheet.create({
     color: colors.black,
     marginTop: 16,
   },
-  userCircle: {
-    width: 40,
-    height: 40,
-    borderRadius: 40 / 2,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 8,
-    marginRight: 26,
-  },
-  userCircleText: {
-    fontFamily: 'Inter',
-    fontWeight: '500',
-    fontSize: 20,
-    lineHeight: 26,
-    color: colors.white,
-  },
   payToContainer: {
     width: 109,
     height: 78,
