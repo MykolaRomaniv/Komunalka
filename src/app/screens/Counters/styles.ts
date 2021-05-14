@@ -7,6 +7,9 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: colors.white,
   },
+  contentContainer: {
+    paddingBottom: 50,
+  },
   street: {
     ...fonts.normal,
     fontSize: 14,

@@ -10,7 +10,10 @@ import { ScrollView } from 'react-native-gesture-handler'
 import styles from './styles'
 
 const ContentView = () => (
-  <ScrollView style={styles.page}>
+  <ScrollView
+    style={styles.page}
+    contentContainerStyle={styles.contentContainer}
+  >
     <Header>{'Показники лічильників'}</Header>
     <PaymentSection />
     <Text style={styles.street}>{'Вулиця Лукаша, 54, 8'}</Text>

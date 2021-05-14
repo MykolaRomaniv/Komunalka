@@ -6,7 +6,9 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     height: '100%',
   },
-
+  contentContainer: {
+    paddingBottom: 50,
+  },
   menuItemsContainer: {
     marginTop: 4,
     flexDirection: 'row',
@@ -28,6 +30,7 @@ const styles = StyleSheet.create({
     lineHeight: 18,
     color: colors.black,
     opacity: 0.87,
+    marginLeft: 19,
   },
 })
 
