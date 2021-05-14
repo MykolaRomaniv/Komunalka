@@ -12,7 +12,7 @@ interface MainProps {
 
 const Main = ({ navigation }: MainProps) => (
   <SafeAreaView>
-    <ContentView />
+    <ContentView navigation={navigation} />
     <FooterMenu navigation={navigation} />
   </SafeAreaView>
 )
