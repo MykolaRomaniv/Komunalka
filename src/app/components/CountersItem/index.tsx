@@ -1,11 +1,12 @@
 import pen from 'assets/icons/pen.png'
+import Touchable from 'components/Touchable'
 import React from 'react'
 import { Image, Text, View } from 'react-native'
 
 import styles from './styles'
 
 const CountersItem = () => (
-  <View style={styles.container}>
+  <Touchable style={styles.container}>
     <Text style={styles.organizationName}>{'КП “Львівводоканал”'}</Text>
     <Text style={styles.serviceName}>{'хол. вода і відведення'}</Text>
     <View style={styles.columns}>
@@ -23,7 +24,7 @@ const CountersItem = () => (
         </View>
       </View>
     </View>
-  </View>
+  </Touchable>
 )
 
 export default CountersItem

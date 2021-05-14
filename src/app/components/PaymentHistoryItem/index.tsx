@@ -1,10 +1,11 @@
+import Touchable from 'components/Touchable'
 import React from 'react'
 import { Text, View } from 'react-native'
 
 import styles from './styles'
 
 const PaymentHistoryItem = () => (
-  <View style={styles.paymentHistoryContainer}>
+  <Touchable style={styles.paymentHistoryContainer}>
     <Text style={styles.bankName}>{'КФ ПАТ КБП”ПРИВАТБАНК”'}</Text>
     <View style={styles.columns}>
       <View>
@@ -18,7 +19,7 @@ const PaymentHistoryItem = () => (
         <Text style={styles.rightText}>{'21.04.2021'}</Text>
       </View>
     </View>
-  </View>
+  </Touchable>
 )
 
 export default PaymentHistoryItem
