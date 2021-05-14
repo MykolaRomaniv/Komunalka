@@ -10,6 +10,7 @@ export default {
   black: '#000000',
   woodsmoke: '#0E0E12',
   firefly: '#0C1B32',
+  charade: '#2A2A37',
   torchRed: '#FF1744',
   cinnabar: '#E34234',
   tango: '#F47127',
