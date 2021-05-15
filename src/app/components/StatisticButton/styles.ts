@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.blue,
   },
   text: {
-    fontFamily: 'Source Sans Pro',
+    fontFamily: 'SourceSansPro-ExtraLightItalic',
     fontStyle: 'italic',
     fontWeight: '200',
     fontSize: 12,

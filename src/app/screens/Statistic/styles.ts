@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     height: '50%',
   },
   rowTitle: {
-    fontFamily: 'Source Sans Pro',
+    fontFamily: 'SourceSansPro-ExtraLightItalic',
     fontStyle: 'italic',
     fontWeight: '200',
     fontSize: 12,

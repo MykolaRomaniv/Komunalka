@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   payRate: {
-    fontFamily: 'Source Sans Pro',
+    fontFamily: 'SourceSansPro-ExtraLightItalic',
     fontStyle: 'italic',
     fontWeight: '200',
     fontSize: 12,
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     color: colors.white,
   },
   lastMonth: {
-    fontFamily: 'Source Sans Pro',
+    fontFamily: 'SourceSansPro-LightItalic',
     fontStyle: 'italic',
     fontWeight: '300',
     fontSize: 10,
