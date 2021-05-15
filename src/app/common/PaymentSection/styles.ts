@@ -1,4 +1,5 @@
 import colors from 'constants/colors'
+import fonts from 'constants/fonts'
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -15,20 +16,19 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   payToText: {
-    fontFamily: 'Rubik-Regular',
+    ...fonts.normal,
     fontSize: 10,
     lineHeight: 12,
     color: colors.black,
   },
   payDayText: {
-    fontFamily: 'Rubik-Light',
-    fontWeight: '300',
+    ...fonts.light,
     fontSize: 36,
     lineHeight: 43,
     color: colors.black,
   },
   payMonth: {
-    fontFamily: 'Rubik-Regular',
+    ...fonts.normal,
     fontSize: 14,
     lineHeight: 17,
     color: colors.black,
@@ -38,14 +38,13 @@ const styles = StyleSheet.create({
     width: '30%',
   },
   toPayText: {
-    fontFamily: 'Rubik-Regular',
+    ...fonts.normal,
     fontSize: 10,
     lineHeight: 12,
     color: colors.woodsmoke,
   },
   payAmount: {
-    fontFamily: 'Rubik-Medium',
-    fontWeight: '500',
+    ...fonts.medium,
     fontSize: 20,
     lineHeight: 26,
     color: colors.black,

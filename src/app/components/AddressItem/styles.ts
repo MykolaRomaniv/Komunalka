@@ -1,4 +1,5 @@
 import colors from 'constants/colors'
+import fonts from 'constants/fonts'
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -18,14 +19,13 @@ const styles = StyleSheet.create({
     height: 53,
   },
   addressText: {
-    fontFamily: 'Rubik-Regular',
+    ...fonts.normal,
     fontSize: 14,
     lineHeight: 17,
     color: colors.woodsmoke,
   },
   cityText: {
-    fontFamily: 'Rubik-Light',
-    fontWeight: '300',
+    ...fonts.light,
     fontSize: 12,
     lineHeight: 14,
     color: colors.midGray,

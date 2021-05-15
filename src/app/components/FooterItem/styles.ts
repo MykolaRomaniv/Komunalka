@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    fontFamily: 'Open Sans',
+    fontFamily: 'OpenSans-Regular',
     fontSize: 10,
     lineHeight: 14,
     color: colors.osloGray,

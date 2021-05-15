@@ -1,4 +1,5 @@
 import colors from 'constants/colors'
+import fonts from 'constants/fonts'
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -8,8 +9,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   headerText: {
-    fontFamily: 'Rubik-Light',
-    fontWeight: '300',
+    ...fonts.light,
     fontSize: 20,
     lineHeight: 26,
     opacity: 0.87,

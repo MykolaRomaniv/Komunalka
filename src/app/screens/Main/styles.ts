@@ -1,4 +1,5 @@
 import colors from 'constants/colors'
+import fonts from 'constants/fonts'
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -24,8 +25,7 @@ const styles = StyleSheet.create({
     paddingRight: 40,
   },
   paymentHistoryTitle: {
-    fontFamily: 'Rubik-Medium',
-    fontWeight: '500',
+    ...fonts.medium,
     fontSize: 14,
     lineHeight: 18,
     color: colors.black,
