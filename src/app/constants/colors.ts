@@ -17,6 +17,7 @@ export default {
   orangePeel: '#FF9900',
   atlantis: '#97CD2D',
   blue: '#1400FF',
+  blueRibbon: '#005FF9',
   dodgerBlue: '#307AFF',
   scooter: '#3DC3CF',
   electricViolet: '#D500F9',
