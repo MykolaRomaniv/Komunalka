@@ -25,7 +25,7 @@ const ContentView = ({ navigation: { navigate } }: ContentViewProps) => (
       <View style={styles.row}>
         <MainMenuItems
           title="Оплатити комуналку"
-          onPress={() => navigate('Counters')}
+          onPress={() => navigate('Payment')}
         />
         <MainMenuItems title="Адреси" onPress={() => navigate('Addresses')} />
       </View>
