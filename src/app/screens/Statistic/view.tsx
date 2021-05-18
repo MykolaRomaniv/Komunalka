@@ -1,8 +1,8 @@
-// import bgGraph from 'assets/bgGraph.png'
+import arrowUpRed from 'assets/icons/arrowUpRed.png'
 import Header from 'common/Header'
 import StatisticButton from 'components/StatisticButton'
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Image, Text, View } from 'react-native'
 
 import styles from './styles'
 
@@ -22,7 +22,6 @@ const ContentView = () => (
         <StatisticButton selected>{'31 день'}</StatisticButton>
         <StatisticButton>{'12 місцяів'}</StatisticButton>
       </View>
-      {/* <Image source={bgGraph} style={styles.bgGraph} /> */}
     </View>
     <View style={styles.banner}>
       <Text style={styles.month}>{'Березень 2021'}</Text>
@@ -35,10 +34,13 @@ const ContentView = () => (
             <Text style={styles.amount}>{'233'}</Text>
             <Text style={styles.currency}>{'ГРН'}</Text>
           </View>
-          <Text style={styles.difference}>{'Підвищення 10%'}</Text>
+          <View style={styles.upDownRow}>
+            <Image source={arrowUpRed} style={styles.arrowUpRed} />
+            <Text style={styles.difference}>{'Підвищення 10%'}</Text>
+          </View>
         </View>
       </View>
-      <View />
+      <View style={styles.serviceFooter} />
     </View>
   </View>
 )

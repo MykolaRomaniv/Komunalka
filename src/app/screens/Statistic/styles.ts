@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     elevation: 3,
     borderRadius: 45,
     marginTop: -45,
-    paddingBottom: 45,
+    overflow: 'hidden',
   },
   month: {
     ...fonts.medium,
@@ -86,7 +86,20 @@ const styles = StyleSheet.create({
   },
   amountRow: {
     flexDirection: 'row',
-    // alignItems: 'flex-end',
+    marginLeft: 8,
+  },
+  upDownRow: {
+    flexDirection: 'row',
+    marginRight: 10,
+    marginBottom: 4,
+  },
+  arrowUpRed: {
+    width: 28,
+    height: 16,
+  },
+  serviceFooter: {
+    backgroundColor: colors.dodgerBlue,
+    height: 67,
   },
 })
 
