@@ -68,6 +68,31 @@ const styles = StyleSheet.create({
     height: 32,
     marginBottom: -30,
   },
+  divider: {
+    marginTop: 50,
+  },
+  facebookButton: {
+    backgroundColor: colors.chambray,
+    // box-shadow: 0px 4px 8px rgba(59, 89, 153, 0.24),
+    borderRadius: 6,
+    height: 40,
+    width: 140,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  facebookIcon: {
+    width: 40,
+    height: 40,
+  },
+  facebookText: {
+    ...fonts.medium,
+    fontSize: 14,
+    lineHeight: 17,
+    textTransform: 'uppercase',
+    color: colors.white,
+    marginRight: 15,
+  },
 })
 
 export default styles

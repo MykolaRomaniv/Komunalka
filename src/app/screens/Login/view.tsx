@@ -1,6 +1,7 @@
+import facebook from 'assets/icons/facebook.png'
 import Touchable from 'components/Touchable'
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Image, Text, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 import Form from './form'
@@ -28,7 +29,12 @@ const ContentView = ({ save, valid }: ContentViewProps) => (
           disabled={!valid}
           style={[styles.submitButton, !valid && styles.disabledButton]}
         >
-          <Text style={styles.submitText}>{'Зареєструватись'}</Text>
+          <Text style={styles.submitText}>{'Увійти'}</Text>
+        </Touchable>
+        <View style={styles.divider} />
+        <Touchable style={styles.facebookButton}>
+          <Image source={facebook} style={styles.facebookIcon} />
+          <Text style={styles.facebookText}>{'Facebook'}</Text>
         </Touchable>
       </View>
     </View>

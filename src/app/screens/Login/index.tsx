@@ -24,7 +24,7 @@ const mapDispatchToProps = (dispatch: Dispatch<AllAction>) => ({
 
 const connector = connect(mapStateToProps, mapDispatchToProps)
 
-type IProps = StackScreenProps<AppStackParamList, 'Registration'> &
+type IProps = StackScreenProps<AppStackParamList, 'Login'> &
   ConnectedProps<typeof connector>
 
 const Login: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
