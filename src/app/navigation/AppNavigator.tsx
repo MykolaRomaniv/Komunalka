@@ -6,6 +6,7 @@ import {
 import React from 'react'
 import { connect } from 'react-redux'
 import Addresses from 'screens/Addresses'
+import CardPayment from 'screens/CardPayment'
 import Counters from 'screens/Counters'
 import Login from 'screens/Login'
 import Main from 'screens/Main'
@@ -30,7 +31,7 @@ const AppNavigator = () => (
         headerShown: false,
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}
-      initialRouteName="Login"
+      initialRouteName="CardPayment"
     >
       <Stack.Screen name="Main" component={Main} />
       <Stack.Screen name="Addresses" component={Addresses} />
@@ -39,6 +40,7 @@ const AppNavigator = () => (
       <Stack.Screen name="Payment" component={Payment} />
       <Stack.Screen name="Registration" component={Registration} />
       <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="CardPayment" component={CardPayment} />
     </Stack.Navigator>
   </NavigationContainer>
 )
