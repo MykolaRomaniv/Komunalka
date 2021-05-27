@@ -1,6 +1,7 @@
 export default {
   white: '#FFFFFF',
   romance: '#FFFEFD',
+  concrete: '#F2F2F2',
   orangeWhite: '#FEF7EC',
   borderGray: '#D0D0D0',
   textGray: '#8E8E8E',
@@ -22,6 +23,7 @@ export default {
   blue: '#1400FF',
   blueRibbon: '#005FF9',
   dodgerBlue: '#307AFF',
+  denim: '#1A73E9',
   scooter: '#3DC3CF',
   electricViolet: '#D500F9',
   transparent: 'transparent',
