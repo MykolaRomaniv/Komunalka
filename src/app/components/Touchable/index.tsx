@@ -6,7 +6,7 @@ interface TouchableProps {
   onPress?: () => void
   style?: StyleProp<ViewStyle>
   activeOpacity?: number
-  disabled: boolean
+  disabled?: boolean
 }
 
 const Touchable: React.FC<TouchableProps> = ({
