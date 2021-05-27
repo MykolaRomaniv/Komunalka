@@ -20,6 +20,7 @@ export default {
   orangePeel: '#FF9900',
   atlantis: '#97CD2D',
   sail: '#ACCEF7',
+  chambray: '#3B5999',
   blue: '#1400FF',
   blueRibbon: '#005FF9',
   dodgerBlue: '#307AFF',
