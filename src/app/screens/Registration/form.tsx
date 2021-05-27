@@ -68,7 +68,7 @@ const Form = () => (
       required
     /> */}
     <Input
-      name="newPassword"
+      name="password"
       label="Пароль"
       placeholder="Введіть пароль"
       style={styles.input}

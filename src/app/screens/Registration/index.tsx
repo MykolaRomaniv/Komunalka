@@ -40,14 +40,13 @@ const Registration: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
   initialize,
   authActions: { updateUser },
   values,
-  // isLoading,
   valid,
 }) => {
   useEffect(() => {
     initialize({
       name: user?.name || '',
       familyName: user?.familyName || '',
-      phoneNumber: '',
+      // phoneNumber: '',
       email: user?.email || '',
       password: '',
       confirmPassword: '',
