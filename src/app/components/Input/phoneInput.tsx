@@ -31,6 +31,7 @@ const PhoneInput = (props: IProps, ref: React.Ref<TextInput>) => {
   return (
     <BaseInput
       {...props}
+      keyboardType="phone-pad"
       value={value}
       onChangeText={(text: string) => {
         onChangeText(text)
