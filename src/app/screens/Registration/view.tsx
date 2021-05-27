@@ -18,6 +18,10 @@ const ContentView = ({ save, valid }: ContentViewProps) => (
   >
     <View style={styles.screen}>
       <View style={styles.content}>
+        <Text style={styles.title}>{'Komunalochka'}</Text>
+        <Text style={styles.description}>
+          {'твій менеджер комунальних послуг'}
+        </Text>
         <Form />
         <Touchable
           onPress={save}

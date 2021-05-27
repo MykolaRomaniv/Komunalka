@@ -1,14 +1,18 @@
 import email from 'assets/icons/email.png'
+import lock from 'assets/icons/lock.png'
+import lockOpen from 'assets/icons/lockOpen.png'
+import userFilled from 'assets/icons/userFilled.png'
+import userOutlined from 'assets/icons/userOutlined.png'
 import Input from 'components/Input'
 import { minPasswordLen } from 'constants/index'
 import React from 'react'
 import { Image } from 'react-native'
 import { Validator } from 'redux-form'
-import { phoneNormalize } from 'services/normalize'
+// import { phoneNormalize } from 'services/normalize'
 import {
   emailValidate,
   minLengthValidate,
-  phoneValidate,
+  // phoneValidate,
 } from 'services/validation'
 
 import IFormData from './IFormData.d'
@@ -33,14 +37,15 @@ const Form = () => (
       validate={emailValidate}
       style={styles.input}
       autoCapitalize="none"
-      required
       right={<Image source={email} style={styles.rightIcon} />}
+      required
     />
     <Input
       name="name"
       label="Ім’я"
       placeholder="Введіть ваше ім'я"
       style={styles.input}
+      right={<Image source={userOutlined} style={styles.rightIcon} />}
       required
     />
     <Input
@@ -48,9 +53,10 @@ const Form = () => (
       label="Фамілія"
       placeholder="Введіть вашу фамілію"
       style={styles.input}
+      right={<Image source={userFilled} style={styles.rightIcon} />}
       required
     />
-    <Input
+    {/* <Input
       name="phoneNumber"
       label="Phone number"
       type="telephoneNumber"
@@ -58,8 +64,9 @@ const Form = () => (
       validate={phoneValidate}
       normalize={phoneNormalize}
       style={styles.input}
+      right={<Image source={email} style={styles.rightIcon} />}
       required
-    />
+    /> */}
     <Input
       name="newPassword"
       label="Пароль"
@@ -67,6 +74,8 @@ const Form = () => (
       style={styles.input}
       type="password"
       validate={lengthValidate}
+      right={<Image source={lock} style={styles.rightIcon} />}
+      required
     />
     <Input
       name="confirmPassword"
@@ -75,6 +84,8 @@ const Form = () => (
       style={styles.input}
       type="password"
       validate={confirmPasswordValidate}
+      right={<Image source={lockOpen} style={styles.rightIcon} />}
+      required
     />
   </>
 )
