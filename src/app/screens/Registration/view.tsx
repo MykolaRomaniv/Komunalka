@@ -1,6 +1,6 @@
+import Touchable from 'components/Touchable'
 import React from 'react'
 import { Text, View } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 import Form from './form'
@@ -19,9 +19,13 @@ const ContentView = ({ save, valid }: ContentViewProps) => (
     <View style={styles.screen}>
       <View style={styles.content}>
         <Form />
-        <TouchableOpacity onPress={save} disabled={!valid} activeOpacity={0.7}>
-          <Text style={styles.submitText}>{'Save'}</Text>
-        </TouchableOpacity>
+        <Touchable
+          onPress={save}
+          disabled={!valid}
+          style={[styles.submitButton, !valid && styles.disabledButton]}
+        >
+          <Text style={styles.submitText}>{'Зареєструватись'}</Text>
+        </Touchable>
       </View>
     </View>
   </KeyboardAwareScrollView>
