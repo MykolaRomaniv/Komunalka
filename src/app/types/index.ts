@@ -1,3 +1,4 @@
+import { User as GoogleUser } from '@react-native-community/google-signin'
 import { AxiosError } from 'axios'
 import { Animated, RegisteredStyle, ViewStyle } from 'react-native'
 import { Action } from 'redux'
@@ -43,6 +44,7 @@ export type AppStackParamList = {
   Counters: undefined
   Statistic: undefined
   Payment: undefined
+  Registration: undefined
 }
 
 export type AnimatedViewStyle =
@@ -85,3 +87,7 @@ export type TextContentType =
   | 'oneTimeCode'
   // is not in the documentation. may occur strange behavior
   | 'expiryDate'
+
+export type User = GoogleUser
+let user: User
+export type UserData = typeof user.user
