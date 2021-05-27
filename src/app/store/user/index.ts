@@ -1,5 +1,4 @@
-import { User } from '@react-native-community/google-signin'
-import { IError } from 'types/index'
+import { IError, User } from 'types/index'
 
 import ActionType, { Action } from './types'
 
