@@ -16,24 +16,32 @@ const styles = StyleSheet.create({
     paddingBottom: 6,
   },
   homeIcon: {
-    width: 28,
-    height: 28,
+    width: 15,
+    height: 15,
   },
-  graphIcon: {
-    width: 30,
-    height: 24,
+  counterIcon: {
+    width: 14,
+    height: 17,
   },
   notificationIcon: {
-    width: 24,
-    height: 24,
+    width: 13.5,
+    height: 20,
   },
   addressIcon: {
-    width: 24,
-    height: 24,
+    width: 17,
+    height: 17,
   },
-  personIcon: {
-    width: 26,
-    height: 24,
+  autoPaymentsIcon: {
+    width: 19,
+    height: 17,
+  },
+  statisticsIcon: {
+    width: 24,
+    height: 17,
+  },
+  paymentIcon: {
+    width: 10,
+    height: 17,
   },
 })
 

@@ -1,15 +1,86 @@
 import { StackNavigationProp } from '@react-navigation/stack'
-import graph from 'assets/icons/graph.png'
+import address from 'assets/icons/address.png'
+import addressSelected from 'assets/icons/addressSelected.png'
+import autoPayments from 'assets/icons/autoPayments.png'
+import autoPaymentsSelected from 'assets/icons/autoPaymentsSelected.png'
+import counter from 'assets/icons/counter.png'
+import counterSelected from 'assets/icons/counterSelected.png'
 import home from 'assets/icons/home.png'
-import address from 'assets/icons/menuAddress.png'
+import homeSelected from 'assets/icons/homeSelected.png'
 import notification from 'assets/icons/notification.png'
-import person from 'assets/icons/person.png'
+import notificationSelected from 'assets/icons/notificationSelected.png'
+import payment from 'assets/icons/payment.png'
+import paymentSelected from 'assets/icons/paymentSelected.png'
+import statistics from 'assets/icons/statistics.png'
+import statisticsSelected from 'assets/icons/statisticsSelected.png'
 import FooterItem from 'components/FooterItem'
 import React from 'react'
-import { View } from 'react-native'
+import { ImageSourcePropType, ImageStyle, StyleProp, View } from 'react-native'
 import { AppStackParamList } from 'types'
 
 import styles from './styles'
+
+interface FooterItem {
+  text: string
+  screenName: keyof AppStackParamList
+  icon: ImageSourcePropType
+  selectedIcon: ImageSourcePropType
+  iconStyle: StyleProp<ImageStyle>
+  selected?: boolean
+}
+
+const FOOTER_ITEMS: FooterItem[] = [
+  {
+    icon: home,
+    selectedIcon: homeSelected,
+    iconStyle: styles.homeIcon,
+    screenName: 'Main',
+    text: 'Головна',
+    selected: true,
+  },
+  {
+    icon: counter,
+    selectedIcon: counterSelected,
+    iconStyle: styles.counterIcon,
+    screenName: 'Counters',
+    text: 'Лічильники',
+  },
+  {
+    icon: address,
+    selectedIcon: addressSelected,
+    iconStyle: styles.addressIcon,
+    screenName: 'Addresses',
+    text: 'Адреси',
+  },
+  {
+    icon: notification,
+    selectedIcon: notificationSelected,
+    iconStyle: styles.notificationIcon,
+    screenName: 'Notifications',
+    text: 'Нагадування',
+  },
+  {
+    icon: autoPayments,
+    selectedIcon: autoPaymentsSelected,
+    iconStyle: styles.autoPaymentsIcon,
+    screenName: 'AutoPayments',
+    text: 'Автоплатежі',
+  },
+  {
+    icon: statistics,
+    selectedIcon: statisticsSelected,
+    iconStyle: styles.statisticsIcon,
+    screenName: 'Statistic',
+    text: 'Статистика',
+  },
+  {
+    icon: payment,
+    selectedIcon: paymentSelected,
+    iconStyle: styles.paymentIcon,
+    screenName: 'Payment',
+    text: 'Оплата',
+  },
+]
 
 interface FooterMenuProps {
   navigation: StackNavigationProp<AppStackParamList, keyof AppStackParamList>
@@ -17,37 +88,16 @@ interface FooterMenuProps {
 
 const FooterMenu = ({ navigation: { navigate } }: FooterMenuProps) => (
   <View style={styles.footerMenu}>
-    <FooterItem
-      icon={home}
-      iconStyle={styles.homeIcon}
-      text="Головна"
-      selected
-      onPress={() => navigate('Main')}
-    />
-    <FooterItem
-      icon={graph}
-      iconStyle={styles.graphIcon}
-      text="Статистика"
-      onPress={() => navigate('Statistic')}
-    />
-    <FooterItem
-      icon={notification}
-      iconStyle={styles.notificationIcon}
-      text="Нагадування"
-      onPress={() => navigate('Main')}
-    />
-    <FooterItem
-      icon={address}
-      iconStyle={styles.addressIcon}
-      text="Адреси"
-      onPress={() => navigate('Addresses')}
-    />
-    <FooterItem
-      icon={person}
-      iconStyle={styles.personIcon}
-      text="Лічильники"
-      onPress={() => navigate('Counters')}
-    />
+    {FOOTER_ITEMS.map((item) => (
+      <FooterItem
+        key={item.screenName}
+        icon={item.icon}
+        iconStyle={item.iconStyle}
+        text={item.text}
+        selected={item.selected}
+        onPress={() => navigate(item.screenName)}
+      />
+    ))}
   </View>
 )
 
