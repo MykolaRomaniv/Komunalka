@@ -11,6 +11,7 @@ import Counters from 'screens/Counters'
 import Login from 'screens/Login'
 import Main from 'screens/Main'
 import Payment from 'screens/Payment'
+import PaymentResult from 'screens/PaymentResult'
 import Registration from 'screens/Registration'
 import Statistic from 'screens/Statistic'
 import { AppStackParamList, ReduxState } from 'types'
@@ -31,7 +32,7 @@ const AppNavigator = () => (
         headerShown: false,
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}
-      initialRouteName="CardPayment"
+      initialRouteName="PaymentResult"
     >
       <Stack.Screen name="Main" component={Main} />
       <Stack.Screen name="Addresses" component={Addresses} />
@@ -41,6 +42,7 @@ const AppNavigator = () => (
       <Stack.Screen name="Registration" component={Registration} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="CardPayment" component={CardPayment} />
+      <Stack.Screen name="PaymentResult" component={PaymentResult} />
     </Stack.Navigator>
   </NavigationContainer>
 )

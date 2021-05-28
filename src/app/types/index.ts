@@ -47,6 +47,7 @@ export type AppStackParamList = {
   Registration: undefined
   Login: undefined
   CardPayment: undefined
+  PaymentResult: { isSuccessful?: boolean }
 }
 
 export type AnimatedViewStyle =
