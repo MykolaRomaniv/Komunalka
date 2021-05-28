@@ -55,7 +55,7 @@ const CardPayment: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
 
   return (
     <SafeAreaView>
-      <ContentView save={save} valid={valid} sum={sum} isPayed={false} />
+      <ContentView save={save} valid={valid} sum={sum} />
       <FooterMenu navigation={navigation} />
     </SafeAreaView>
   )

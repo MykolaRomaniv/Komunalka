@@ -61,22 +61,6 @@ const styles = StyleSheet.create({
     width: '40%',
     marginTop: 30,
   },
-  payed: {
-    width: 117,
-    height: 117,
-  },
-  imageWrapper: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 24,
-  },
-  payedTitleWrapper: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '70%',
-    alignSelf: 'center',
-    marginTop: 24,
-  },
 })
 
 export default styles
