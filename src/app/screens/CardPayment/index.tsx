@@ -1,5 +1,7 @@
 import { StackScreenProps } from '@react-navigation/stack'
+import FooterMenu from 'common/FooterMenu'
 import React, { useEffect } from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import { connect, ConnectedProps } from 'react-redux'
 import { bindActionCreators, compose, Dispatch } from 'redux'
 import { formValueSelector, InjectedFormProps, reduxForm } from 'redux-form'
@@ -36,6 +38,7 @@ const CardPayment: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
   initialize,
   values,
   valid,
+  navigation,
 }) => {
   useEffect(() => {
     initialize({
@@ -50,7 +53,12 @@ const CardPayment: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
     console.log(data)
   }
 
-  return <ContentView save={save} valid={valid} sum={sum} />
+  return (
+    <SafeAreaView>
+      <ContentView save={save} valid={valid} sum={sum} isPayed={false} />
+      <FooterMenu navigation={navigation} />
+    </SafeAreaView>
+  )
 }
 
 export default compose<typeof CardPayment>(
