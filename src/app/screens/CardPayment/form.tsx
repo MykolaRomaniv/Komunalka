@@ -8,6 +8,8 @@ import {
   numberValidate,
 } from 'services/validation'
 
+import styles from './styles'
+
 const Form = () => (
   <View>
     <Input
@@ -18,9 +20,11 @@ const Form = () => (
       type="creditCardNumber"
       validate={CreditCardNumberValidate}
       required
+      underlineColor="transparent"
+      style={styles.input}
     />
     {/* <Input label="Name of Card" placeholder="Enter Name" name="nameOfCard" /> */}
-    <View>
+    <View style={styles.infoRow}>
       <Input
         label="Термін"
         placeholder="01 / 01"
@@ -29,6 +33,8 @@ const Form = () => (
         type="expiryDate"
         required
         validate={expirityDateValidate}
+        style={[styles.input, styles.rowItem]}
+        underlineColor="transparent"
       />
       <Input
         label="CVC код"
@@ -39,6 +45,8 @@ const Form = () => (
         maxLength={3}
         required
         validate={[numberValidate, minLengthValidate(3)]}
+        style={[styles.input, styles.rowItem]}
+        underlineColor="transparent"
       />
     </View>
   </View>
