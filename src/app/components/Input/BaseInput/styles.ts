@@ -41,7 +41,7 @@ export const theme: DeepPartial<Theme> = {
     placeholder: colors.textGray,
   },
 
-  roundness: 12,
+  roundness: 6,
 }
 
 export default styles
