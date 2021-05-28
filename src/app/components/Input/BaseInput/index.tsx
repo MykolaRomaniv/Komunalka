@@ -49,14 +49,14 @@ const BaseInput = (
             ref={ref}
             editable={editable}
             defaultValue={meta?.initial}
-            selectionColor={colors.sail}
+            selectionColor={colors.dodgerBlue}
             {...props}
           />
         ) : (
           <TextInput
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
-            selectionColor={colors.sail}
+            selectionColor={colors.dodgerBlue}
             mode={mode}
             theme={theme}
             style={[styles.input, !!right && styles.inputWithRight]}
