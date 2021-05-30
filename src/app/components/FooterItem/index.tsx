@@ -6,6 +6,7 @@ import {
   ImageStyle,
   StyleProp,
   Text,
+  View,
 } from 'react-native'
 
 import styles from './styles'
@@ -27,7 +28,9 @@ const FooterItem = ({
 }: FooterItemProps) => (
   <Touchable style={styles.container} onPress={onPress}>
     <Image source={icon} style={iconStyle} />
-    <Text style={[styles.text, selected && styles.selected]}>{text}</Text>
+    <View style={styles.textWrapper}>
+      <Text style={[styles.text, selected && styles.selected]}>{text}</Text>
+    </View>
   </Touchable>
 )
 
