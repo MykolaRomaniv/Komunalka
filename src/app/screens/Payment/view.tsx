@@ -2,7 +2,7 @@ import arrowDown from 'assets/icons/arrowDown.png'
 import calendar from 'assets/icons/calendar.png'
 import Header from 'common/Header'
 import PaymentSection from 'common/PaymentSection'
-import CountersItem from 'components/items/CounterItem'
+import PaymentItem from 'components/items/PaymentItem'
 import React from 'react'
 import { Image, Text, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
@@ -22,10 +22,10 @@ const ContentView = () => (
       <Text>{'Квітень 2021'}</Text>
       <Image source={arrowDown} style={styles.arrowDown} />
     </View>
-    <CountersItem isPayment />
-    <CountersItem isPayment />
-    <CountersItem isPayment />
-    <CountersItem isPayment />
+    <PaymentItem />
+    <PaymentItem />
+    <PaymentItem />
+    <PaymentItem />
   </ScrollView>
 )
 
