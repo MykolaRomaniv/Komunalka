@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
     height: 78,
     alignItems: 'center',
     justifyContent: 'flex-end',
+    paddingTop: 35,
   },
   payToText: {
     ...fonts.normal,
