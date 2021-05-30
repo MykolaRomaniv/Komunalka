@@ -30,13 +30,13 @@ const MENU_ITEMS: MenuItem[] = [
     iconStyle: styles.statisticsIcon,
   },
   {
-    link: 'Notifications',
+    link: 'NotificationsAndPayments',
     title: 'Нагадування',
     icon: notificationHome,
     iconStyle: styles.notificationIcon,
   },
   {
-    link: 'AutoPayments',
+    link: 'NotificationsAndPayments',
     title: 'Автоплатежі',
     icon: autoPaymentHome,
     iconStyle: styles.autoPaymentIcon,
