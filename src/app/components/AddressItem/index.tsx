@@ -1,5 +1,4 @@
 import selectedAddress from 'assets/icons/mapPinSelected.png'
-import Touchable from 'components/Touchable'
 import React from 'react'
 import { Image, Text, View } from 'react-native'
 
@@ -11,13 +10,13 @@ interface AddressItemProps {
 }
 
 const AddressItem = ({ address, city }: AddressItemProps) => (
-  <Touchable style={styles.container} activeOpacity={0.87}>
+  <View style={styles.container}>
     <Image source={selectedAddress} style={styles.icon} />
     <View>
       <Text style={styles.addressText}>{address}</Text>
       <Text style={styles.cityText}>{city}</Text>
     </View>
-  </Touchable>
+  </View>
 )
 
 export default AddressItem
