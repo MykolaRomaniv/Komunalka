@@ -46,7 +46,6 @@ const Registration: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
     initialize({
       name: user?.name || '',
       familyName: user?.familyName || '',
-      // phoneNumber: '',
       email: user?.email || '',
       password: '',
       confirmPassword: '',

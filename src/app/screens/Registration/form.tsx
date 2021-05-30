@@ -8,12 +8,7 @@ import { minPasswordLen } from 'constants/index'
 import React from 'react'
 import { Image } from 'react-native'
 import { Validator } from 'redux-form'
-// import { phoneNormalize } from 'services/normalize'
-import {
-  emailValidate,
-  minLengthValidate,
-  // phoneValidate,
-} from 'services/validation'
+import { emailValidate, minLengthValidate } from 'services/validation'
 
 import IFormData from './IFormData.d'
 import styles from './styles'
@@ -56,17 +51,6 @@ const Form = () => (
       right={<Image source={userFilled} style={styles.rightIcon} />}
       required
     />
-    {/* <Input
-      name="phoneNumber"
-      label="Phone number"
-      type="telephoneNumber"
-      placeholder="Enter your phone"
-      validate={phoneValidate}
-      normalize={phoneNormalize}
-      style={styles.input}
-      right={<Image source={email} style={styles.rightIcon} />}
-      required
-    /> */}
     <Input
       name="password"
       label="Пароль"

@@ -34,7 +34,6 @@ const AppNavigator = () => (
         headerShown: false,
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}
-      initialRouteName="PaymentResult"
     >
       <Stack.Screen name="Main" component={Main} />
       <Stack.Screen name="Addresses" component={Addresses} />
