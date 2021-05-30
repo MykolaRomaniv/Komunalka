@@ -110,3 +110,8 @@ export interface MenuItem {
   icon: ImageSourcePropType
   iconStyle: StyleProp<ImageStyle>
 }
+
+export interface IAddressItem {
+  address: string
+  city: string
+}
