@@ -56,14 +56,14 @@ const FOOTER_ITEMS: FooterItem[] = [
     icon: notification,
     selectedIcon: notificationSelected,
     iconStyle: styles.notificationIcon,
-    screenName: 'Notifications',
+    screenName: 'NotificationsAndPayments',
     text: 'Нагадування',
   },
   {
     icon: autoPayments,
     selectedIcon: autoPaymentsSelected,
     iconStyle: styles.autoPaymentsIcon,
-    screenName: 'AutoPayments',
+    screenName: 'NotificationsAndPayments',
     text: 'Автоплатежі',
   },
   {
@@ -90,7 +90,7 @@ const FooterMenu = ({ navigation: { navigate } }: FooterMenuProps) => (
   <View style={styles.footerMenu}>
     {FOOTER_ITEMS.map((item) => (
       <FooterItem
-        key={item.screenName}
+        key={item.text}
         icon={item.icon}
         iconStyle={item.iconStyle}
         text={item.text}

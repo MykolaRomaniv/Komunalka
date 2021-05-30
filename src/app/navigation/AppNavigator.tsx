@@ -7,12 +7,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 import AddAddress from 'screens/AddAddress'
 import Addresses from 'screens/Addresses'
-import AutoPayments from 'screens/AutoPayments'
 import CardPayment from 'screens/CardPayment'
 import Counters from 'screens/Counters'
 import Login from 'screens/Login'
 import Main from 'screens/Main'
-import Notifications from 'screens/Notifications'
+import NotificationsAndPayments from 'screens/NotificationsAndPayments'
 import Payment from 'screens/Payment'
 import PaymentResult from 'screens/PaymentResult'
 import Registration from 'screens/Registration'
@@ -45,8 +44,10 @@ const AppNavigator = () => (
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="CardPayment" component={CardPayment} />
       <Stack.Screen name="PaymentResult" component={PaymentResult} />
-      <Stack.Screen name="Notifications" component={Notifications} />
-      <Stack.Screen name="AutoPayments" component={AutoPayments} />
+      <Stack.Screen
+        name="NotificationsAndPayments"
+        component={NotificationsAndPayments}
+      />
       <Stack.Screen name="AddAddress" component={AddAddress} />
     </Stack.Navigator>
   </NavigationContainer>
