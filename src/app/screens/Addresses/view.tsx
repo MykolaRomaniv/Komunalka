@@ -1,3 +1,4 @@
+import { StackNavigationProp } from '@react-navigation/stack'
 import add from 'assets/icons/add.png'
 import mapBg from 'assets/mapBg.png'
 import Header from 'common/Header'
@@ -6,7 +7,7 @@ import AddressItem from 'components/AddressItem'
 import Touchable from 'components/Touchable'
 import React from 'react'
 import { Image, View } from 'react-native'
-import { IAddressItem } from 'types'
+import { AppStackParamList, IAddressItem } from 'types'
 
 import styles from './styles'
 
@@ -37,12 +38,16 @@ const ADDRESSES: IAddressItem[] = [
   },
 ]
 
-const ContentView = () => (
+interface ContentViewProps {
+  navigation: StackNavigationProp<AppStackParamList, 'Addresses'>
+}
+
+const ContentView = ({ navigation: { navigate } }: ContentViewProps) => (
   <View style={styles.page}>
     <Header>{'Адреси'}</Header>
     <Image source={mapBg} style={styles.map} />
     <View style={styles.iconsRow}>
-      <Touchable>
+      <Touchable onPress={() => navigate('AddAddress')}>
         <Image source={add} style={styles.addIcon} />
       </Touchable>
     </View>

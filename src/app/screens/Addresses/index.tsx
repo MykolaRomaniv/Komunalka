@@ -12,7 +12,7 @@ interface AddressesProps {
 
 const Addresses = ({ navigation }: AddressesProps) => (
   <SafeAreaView>
-    <ContentView />
+    <ContentView navigation={navigation} />
     <FooterMenu navigation={navigation} />
   </SafeAreaView>
 )
