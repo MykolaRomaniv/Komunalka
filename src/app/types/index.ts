@@ -1,6 +1,13 @@
 import { User as GoogleUser } from '@react-native-community/google-signin'
 import { AxiosError } from 'axios'
-import { Animated, RegisteredStyle, ViewStyle } from 'react-native'
+import {
+  Animated,
+  ImageSourcePropType,
+  ImageStyle,
+  RegisteredStyle,
+  StyleProp,
+  ViewStyle,
+} from 'react-native'
 import { Action } from 'redux'
 import { ThunkAction } from 'redux-thunk'
 import rootReducer from 'store'
@@ -96,3 +103,10 @@ export type TextContentType =
 export type User = GoogleUser
 let user: User
 export type UserData = typeof user.user
+
+export interface MenuItem {
+  title: string
+  link: keyof AppStackParamList
+  icon: ImageSourcePropType
+  iconStyle: StyleProp<ImageStyle>
+}
