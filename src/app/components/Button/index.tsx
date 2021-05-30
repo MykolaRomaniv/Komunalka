@@ -5,7 +5,7 @@ import { Text } from 'react-native'
 import styles from './styles'
 
 interface ButtonProps {
-  onPress: () => void
+  onPress?: () => void
   disabled?: boolean
   children: string
 }
