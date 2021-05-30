@@ -2,6 +2,7 @@ import arrowDown from 'assets/icons/arrowDown.png'
 import calendar from 'assets/icons/calendar.png'
 import Header from 'common/Header'
 import PaymentSection from 'common/PaymentSection'
+import Button from 'components/Button'
 import CountersItem from 'components/items/CounterItem'
 import React from 'react'
 import { Image, Text, View } from 'react-native'
@@ -26,6 +27,7 @@ const ContentView = () => (
     <CountersItem />
     <CountersItem />
     <CountersItem />
+    <Button onPress={() => undefined}>{'Надіслати'}</Button>
   </ScrollView>
 )
 
