@@ -1,15 +1,22 @@
+import { StackNavigationProp } from '@react-navigation/stack'
 import arrowDown from 'assets/icons/arrowDown.png'
 import calendar from 'assets/icons/calendar.png'
 import Header from 'common/Header'
 import PaymentSection from 'common/PaymentSection'
+import Button from 'components/Button'
 import PaymentItem from 'components/items/PaymentItem'
 import React from 'react'
 import { Image, Text, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
+import { AppStackParamList } from 'types'
 
 import styles from './styles'
 
-const ContentView = () => (
+interface ContentViewProps {
+  navigation: StackNavigationProp<AppStackParamList, 'Payment'>
+}
+
+const ContentView = ({ navigation: { navigate } }: ContentViewProps) => (
   <ScrollView
     style={styles.page}
     contentContainerStyle={styles.contentContainer}
@@ -26,6 +33,7 @@ const ContentView = () => (
     <PaymentItem />
     <PaymentItem />
     <PaymentItem />
+    <Button onPress={() => navigate('CardPayment')}>{'Сплатити 583,60'}</Button>
   </ScrollView>
 )
 

@@ -12,7 +12,7 @@ interface CountersProps {
 
 const Counters = ({ navigation }: CountersProps) => (
   <SafeAreaView>
-    <ContentView />
+    <ContentView navigation={navigation} />
     <FooterMenu navigation={navigation} />
   </SafeAreaView>
 )
