@@ -6,7 +6,7 @@ import React from 'react'
 import { Image, Text, View } from 'react-native'
 import { Switch } from 'react-native-gesture-handler'
 
-import styles from './styles'
+import styles from '../shared'
 
 const PaymentItem = () => {
   const toggle = useToggle()
