@@ -5,6 +5,7 @@ import {
 } from '@react-navigation/stack'
 import React from 'react'
 import { connect } from 'react-redux'
+import AddAddress from 'screens/AddAddress'
 import Addresses from 'screens/Addresses'
 import AutoPayments from 'screens/AutoPayments'
 import CardPayment from 'screens/CardPayment'
@@ -46,6 +47,7 @@ const AppNavigator = () => (
       <Stack.Screen name="PaymentResult" component={PaymentResult} />
       <Stack.Screen name="Notifications" component={Notifications} />
       <Stack.Screen name="AutoPayments" component={AutoPayments} />
+      <Stack.Screen name="AddAddress" component={AddAddress} />
     </Stack.Navigator>
   </NavigationContainer>
 )

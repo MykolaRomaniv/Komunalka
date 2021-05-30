@@ -57,6 +57,7 @@ export type AppStackParamList = {
   PaymentResult: { isSuccessful?: boolean }
   Notifications: undefined
   AutoPayments: undefined
+  AddAddress: undefined
 }
 
 export type AnimatedViewStyle =
