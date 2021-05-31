@@ -59,7 +59,7 @@ const SwipableList = ({ data, renderItem }: SwipableListProps) => {
         renderItem={renderItem}
         renderHiddenItem={renderHiddenItem}
         rightOpenValue={-75}
-        previewRowKey={listData?.[0].key || ''}
+        previewRowKey={listData?.[0]?.key || ''}
         previewOpenValue={-40}
         previewOpenDelay={1500}
         onRowDidOpen={onRowDidOpen}
