@@ -15,9 +15,10 @@ interface SwipableListProps {
     rowData: ListRenderItemInfo<Item>,
     rowMap: RowMap<Item>,
   ) => JSX.Element
+  onDelete: (newItems: Item[]) => void
 }
 
-const SwipableList = ({ data, renderItem }: SwipableListProps) => {
+const SwipableList = ({ data, renderItem, onDelete }: SwipableListProps) => {
   const [listData, setListData] = useState(data)
   const closeRow = (rowMap: RowMap<Item>, rowKey: string) => {
     if (rowMap[rowKey]) {
@@ -31,6 +32,7 @@ const SwipableList = ({ data, renderItem }: SwipableListProps) => {
     const prevIndex = listData.findIndex((item) => item?.key === rowKey)
     newData.splice(prevIndex, 1)
     setListData(newData)
+    onDelete(newData)
   }
 
   const onRowDidOpen = (rowKey: string) => {
