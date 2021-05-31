@@ -14,11 +14,13 @@ import styles from './styles'
 interface ContentViewProps {
   navigation: StackNavigationProp<AppStackParamList, 'Addresses'>
   addresses: IAddressItem[]
+  onDelete: (newAddresses: IAddressItem[]) => void
 }
 
 const ContentView = ({
   navigation: { navigate },
   addresses,
+  onDelete,
 }: ContentViewProps) => (
   <View style={styles.page}>
     <Image source={mapBg} style={styles.map} />
@@ -31,11 +33,12 @@ const ContentView = ({
       <SwipableList
         data={addresses.map((address) => ({
           ...address,
-          key: address.address,
+          key: `${address.street},${address.homeNumber}`,
         }))}
         renderItem={(item) => (
-          <AddressItem address={item.item.address} city={item.item.city} />
+          <AddressItem item={item.item as unknown as IAddressItem} />
         )}
+        onDelete={(item) => onDelete(item as unknown as IAddressItem[])}
       />
     ) : (
       <NoAddresses onPress={() => navigate('AddAddress')} />
