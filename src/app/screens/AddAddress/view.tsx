@@ -1,19 +1,17 @@
-import { StackNavigationProp } from '@react-navigation/stack'
 import addAddressBg from 'assets/addAddressBg.png'
 import Button from 'components/Button'
 import React from 'react'
 import { ImageBackground, Text, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-import { AppStackParamList } from 'types'
 
 import Form from './form'
 import styles from './styles'
 
 interface ContentViewProps {
-  navigation: StackNavigationProp<AppStackParamList, 'AddAddress'>
+  onSave: () => void
 }
 
-const ContentView = ({ navigation: { navigate } }: ContentViewProps) => (
+const ContentView = ({ onSave }: ContentViewProps) => (
   <KeyboardAwareScrollView
     bounces={false}
     contentContainerStyle={styles.screenContainer}
@@ -24,7 +22,7 @@ const ContentView = ({ navigation: { navigate } }: ContentViewProps) => (
           <Text style={styles.title}>{'Додавання адреси:'}</Text>
           <Form />
         </View>
-        <Button onPress={() => navigate('Addresses')}>{'Додати адресу'}</Button>
+        <Button onPress={onSave}>{'Додати адресу'}</Button>
       </ImageBackground>
     </View>
   </KeyboardAwareScrollView>

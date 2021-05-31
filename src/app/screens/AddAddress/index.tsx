@@ -29,7 +29,7 @@ const mapStateToProps = (state: ReduxState) => ({
 })
 
 const mapDispatchToProps = (dispatch: Dispatch<AllAction>) => ({
-  authActions: bindActionCreators(userActions, dispatch),
+  actions: bindActionCreators(userActions, dispatch),
 })
 
 const connector = connect(mapStateToProps, mapDispatchToProps)
@@ -40,6 +40,8 @@ type IProps = StackScreenProps<AppStackParamList, 'AddAddress'> &
 const AddAddress: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
   navigation,
   initialize,
+  values,
+  actions: { saveAddress },
 }) => {
   useEffect(() => {
     initialize({
@@ -51,10 +53,16 @@ const AddAddress: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
     })
   }, [])
 
+  const onSave = () => {
+    const address = { ...values }
+    saveAddress(address)
+    navigation.replace('Addresses')
+  }
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Header navigation={navigation}>{'Адреси'}</Header>
-      <ContentView navigation={navigation} />
+      <ContentView onSave={onSave} />
       <FooterMenu navigation={navigation} />
     </SafeAreaView>
   )
