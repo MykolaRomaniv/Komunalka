@@ -6,7 +6,8 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 10,
+    paddingBottom: 10,
+    backgroundColor: '#fff',
   },
   headerText: {
     ...fonts.light,
