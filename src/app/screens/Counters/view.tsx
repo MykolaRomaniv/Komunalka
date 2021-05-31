@@ -3,6 +3,7 @@ import calendar from 'assets/icons/calendar.png'
 import PaymentSection from 'common/PaymentSection'
 import Button from 'components/Button'
 import CountersItem from 'components/items/CounterItem'
+import { COUNTERS } from 'constants/exampleData'
 import React from 'react'
 import { Image, Text, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
@@ -21,10 +22,9 @@ const ContentView = () => (
       <Text>{'Квітень 2021'}</Text>
       <Image source={arrowDown} style={styles.arrowDown} />
     </View>
-    <CountersItem />
-    <CountersItem />
-    <CountersItem />
-    <CountersItem />
+    {COUNTERS.map((item) => (
+      <CountersItem key={item.personalAccount} item={item} />
+    ))}
     <Button onPress={() => undefined}>{'Надіслати'}</Button>
   </ScrollView>
 )
