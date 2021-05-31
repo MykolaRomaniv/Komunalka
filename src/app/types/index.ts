@@ -112,8 +112,11 @@ export interface MenuItem {
 }
 
 export interface IAddressItem {
-  address: string
+  state: string
   city: string
+  corpus: string
+  homeNumber: string
+  street: string
 }
 
 export interface ICounterItem {
