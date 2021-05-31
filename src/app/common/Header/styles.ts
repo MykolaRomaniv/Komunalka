@@ -8,6 +8,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingBottom: 10,
     backgroundColor: '#fff',
+    position: 'absolute',
+    top: 0,
+    zIndex: 1,
+    width: '100%',
   },
   headerText: {
     ...fonts.light,
