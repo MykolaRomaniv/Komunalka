@@ -1,6 +1,5 @@
 import { StackNavigationProp } from '@react-navigation/stack'
 import addAddressBg from 'assets/addAddressBg.png'
-import Header from 'common/Header'
 import Button from 'components/Button'
 import React from 'react'
 import { ImageBackground, Text, View } from 'react-native'
@@ -20,7 +19,6 @@ const ContentView = ({ navigation: { navigate } }: ContentViewProps) => (
     contentContainerStyle={styles.screenContainer}
   >
     <View style={styles.screen}>
-      <Header>{'Адреси'}</Header>
       <ImageBackground source={addAddressBg} style={styles.content}>
         <View style={styles.formWrapper}>
           <Text style={styles.title}>{'Додавання адреси:'}</Text>

@@ -1,7 +1,6 @@
 import { StackNavigationProp } from '@react-navigation/stack'
 import add from 'assets/icons/add.png'
 import mapBg from 'assets/mapBg.png'
-import Header from 'common/Header'
 import SwipableList from 'common/SwipableList'
 import AddressItem from 'components/AddressItem'
 import Touchable from 'components/Touchable'
@@ -44,7 +43,6 @@ interface ContentViewProps {
 
 const ContentView = ({ navigation: { navigate } }: ContentViewProps) => (
   <View style={styles.page}>
-    <Header>{'Адреси'}</Header>
     <Image source={mapBg} style={styles.map} />
     <View style={styles.iconsRow}>
       <Touchable onPress={() => navigate('AddAddress')}>

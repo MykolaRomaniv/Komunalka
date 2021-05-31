@@ -1,5 +1,6 @@
 import { StackScreenProps } from '@react-navigation/stack'
 import FooterMenu from 'common/FooterMenu'
+import Header from 'common/Header'
 import React, { useEffect } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { connect, ConnectedProps } from 'react-redux'
@@ -51,7 +52,8 @@ const AddAddress: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
   }, [])
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Header navigation={navigation}>{'Адреси'}</Header>
       <ContentView navigation={navigation} />
       <FooterMenu navigation={navigation} />
     </SafeAreaView>

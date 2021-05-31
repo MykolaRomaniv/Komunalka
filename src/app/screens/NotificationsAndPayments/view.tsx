@@ -1,4 +1,3 @@
-import Header from 'common/Header'
 import NoNotifications from 'common/NoNotifications'
 import PaymentSection from 'common/PaymentSection'
 import Touchable from 'components/Touchable'
@@ -13,7 +12,6 @@ const ContentView = () => (
     style={styles.page}
     contentContainerStyle={styles.contentContainer}
   >
-    <Header>{'Оплата комунальних'}</Header>
     <PaymentSection />
     <Text style={styles.title}>{'Нагадування'}</Text>
     <View style={styles.tabView}>

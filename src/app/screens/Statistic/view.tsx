@@ -1,5 +1,4 @@
 import arrowUpRed from 'assets/icons/arrowUpRed.png'
-import Header from 'common/Header'
 import StatisticButton from 'components/StatisticButton'
 import React from 'react'
 import { Image, Text, View } from 'react-native'
@@ -8,7 +7,6 @@ import styles from './styles'
 
 const ContentView = () => (
   <View style={styles.page}>
-    <Header>{'Статистика'}</Header>
     <View style={styles.graphContentWrapper}>
       <Text style={styles.rowTitle}>{'Комунальні послуги:'}</Text>
       <View style={styles.buttonRow}>

@@ -1,6 +1,5 @@
 import arrowDown from 'assets/icons/arrowDown.png'
 import calendar from 'assets/icons/calendar.png'
-import Header from 'common/Header'
 import PaymentSection from 'common/PaymentSection'
 import Button from 'components/Button'
 import CountersItem from 'components/items/CounterItem'
@@ -15,7 +14,6 @@ const ContentView = () => (
     style={styles.page}
     contentContainerStyle={styles.contentContainer}
   >
-    <Header>{'Показники лічильників'}</Header>
     <PaymentSection />
     <Text style={styles.street}>{'Вулиця Лукаша, 54, 8'}</Text>
     <View style={styles.monthContainer}>

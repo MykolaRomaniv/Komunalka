@@ -1,4 +1,3 @@
-import Header from 'common/Header'
 import PaymentSection from 'common/PaymentSection'
 import Button from 'components/Button'
 import React from 'react'
@@ -19,7 +18,6 @@ const ContentView = ({ save, valid, sum }: ContentViewProps) => (
     bounces={false}
     contentContainerStyle={styles.screenContainer}
   >
-    <Header>{'Оплата комунальних'}</Header>
     <PaymentSection />
     <View style={styles.screen}>
       <View style={styles.content}>

@@ -5,7 +5,6 @@ import counterHome from 'assets/icons/counterHome.png'
 import notificationHome from 'assets/icons/notificationHome.png'
 import paymentHome from 'assets/icons/paymentHome.png'
 import statisticsHome from 'assets/icons/statisticsHome.png'
-import Header from 'common/Header'
 import PaymentSection from 'common/PaymentSection'
 import MainMenuItems from 'components/MainMenuItems'
 import PaymentHistoryItem from 'components/PaymentHistoryItem'
@@ -64,7 +63,6 @@ const ContentView = ({ navigation: { navigate } }: ContentViewProps) => (
     style={styles.page}
     contentContainerStyle={styles.contentContainer}
   >
-    <Header>{'Привіт, Педро'}</Header>
     <PaymentSection />
     <View style={styles.menuItemsContainer}>
       {MENU_ITEMS.map((item) => (

@@ -1,6 +1,5 @@
 import payed from 'assets/payed.png'
 import warningSign from 'assets/warningSign.png'
-import Header from 'common/Header'
 import PaymentSection from 'common/PaymentSection'
 import React from 'react'
 import { Image, Text, View } from 'react-native'
@@ -13,7 +12,6 @@ interface ContentViewProps {
 
 const ContentView = ({ isSuccessful }: ContentViewProps) => (
   <View style={styles.screenContainer}>
-    <Header>{'Оплата комунальних'}</Header>
     <PaymentSection />
     <View style={styles.screen}>
       {isSuccessful ? (

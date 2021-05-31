@@ -1,7 +1,6 @@
 import { StackNavigationProp } from '@react-navigation/stack'
 import arrowDown from 'assets/icons/arrowDown.png'
 import calendar from 'assets/icons/calendar.png'
-import Header from 'common/Header'
 import PaymentSection from 'common/PaymentSection'
 import Button from 'components/Button'
 import PaymentItem from 'components/items/PaymentItem'
@@ -21,7 +20,6 @@ const ContentView = ({ navigation: { navigate } }: ContentViewProps) => (
     style={styles.page}
     contentContainerStyle={styles.contentContainer}
   >
-    <Header>{'Оплата комунальних'}</Header>
     <PaymentSection />
     <Text style={styles.street}>{'Вулиця Лукаша, 54, 8'}</Text>
     <View style={styles.monthContainer}>

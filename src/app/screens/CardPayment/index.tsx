@@ -1,5 +1,6 @@
 import { StackScreenProps } from '@react-navigation/stack'
 import FooterMenu from 'common/FooterMenu'
+import Header from 'common/Header'
 import React, { useEffect } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { connect, ConnectedProps } from 'react-redux'
@@ -54,7 +55,8 @@ const CardPayment: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
   }
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Header navigation={navigation}>{'Оплата комунальних'}</Header>
       <ContentView save={save} valid={valid} sum={sum} />
       <FooterMenu navigation={navigation} />
     </SafeAreaView>
