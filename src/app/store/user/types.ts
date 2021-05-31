@@ -1,6 +1,5 @@
 import { User } from '@react-native-community/google-signin'
-
-import { IError } from '../../types'
+import { IAddressItem, IError } from 'types/index'
 
 enum ActionType {
   LOGIN_BEGIN = '[auth] LOGIN_BEGIN',
@@ -10,6 +9,8 @@ enum ActionType {
   SIGN_OUT_SUCCESS = '[auth] SIGN_OUT_SUCCESS',
   SIGN_OUT_ERROR = '[auth] SIGN_OUT_ERROR',
   UPDATE_USER = '[auth] UPDATE_USER',
+  SAVE_ADDRESS = '[addresses] SAVE_ADDRESS',
+  REPLACE_ADDRESSES = '[addresses] REPLACE_ADDRESSES',
 }
 
 export interface LoginBeginAction {
@@ -39,9 +40,19 @@ export interface SignOutErrorAction {
   payload: IError
 }
 
-export interface UpdateUser {
+export interface UpdateUserAction {
   type: ActionType.UPDATE_USER
   payload: User
+}
+
+export interface SaveAddressAction {
+  type: ActionType.SAVE_ADDRESS
+  payload: IAddressItem
+}
+
+export interface ReplaceAddressAction {
+  type: ActionType.REPLACE_ADDRESSES
+  payload: IAddressItem[]
 }
 
 export type Action =
@@ -51,6 +62,8 @@ export type Action =
   | SignOutBeginAction
   | SignOutSuccessAction
   | SignOutErrorAction
-  | UpdateUser
+  | UpdateUserAction
+  | SaveAddressAction
+  | ReplaceAddressAction
 
 export default ActionType
