@@ -52,6 +52,7 @@ const CardPayment: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
   const save = () => {
     const data = { ...values }
     console.log(data)
+    navigation.replace('PaymentResult', { isSuccessful: true })
   }
 
   return (
