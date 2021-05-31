@@ -36,7 +36,6 @@ type IProps = StackScreenProps<AppStackParamList, 'Registration'> &
   ConnectedProps<typeof connector>
 
 const Registration: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
-  user,
   initialize,
   authActions: { updateUser },
   values,
@@ -45,9 +44,9 @@ const Registration: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
 }) => {
   useEffect(() => {
     initialize({
-      name: user?.name || '',
-      familyName: user?.familyName || '',
-      email: user?.email || '',
+      name: '',
+      familyName: '',
+      email: '',
       password: '',
       confirmPassword: '',
     })
