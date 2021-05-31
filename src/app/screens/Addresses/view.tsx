@@ -38,7 +38,7 @@ const ContentView = ({
         )}
       />
     ) : (
-      <NoAddresses />
+      <NoAddresses onPress={() => navigate('AddAddress')} />
     )}
   </View>
 )
