@@ -115,3 +115,11 @@ export interface IAddressItem {
   address: string
   city: string
 }
+
+export interface ICounterItem {
+  companyName: string
+  utilityType: string
+  personalAccount: string
+  counterState: number
+  newCounterState: number
+}
