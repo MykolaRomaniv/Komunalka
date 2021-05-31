@@ -41,6 +41,7 @@ const Registration: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
   authActions: { updateUser },
   values,
   valid,
+  navigation: { replace },
 }) => {
   useEffect(() => {
     initialize({
@@ -54,7 +55,8 @@ const Registration: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
 
   const save = () => {
     const data = { ...values } as Partial<UserData>
-    updateUser({ ...user, user: { ...data } })
+    updateUser({ user: { ...data } })
+    replace('Main')
   }
 
   return <ContentView save={save} valid={valid} />
