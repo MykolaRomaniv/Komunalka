@@ -29,10 +29,12 @@ const TemplateItem = ({
 }: TemplateItemProps) => (
   <Touchable onPress={onPress}>
     <View style={styles.container}>
-      <Image source={icon} style={[styles.templateIcon, iconStyle]} />
-      <View>
-        <Text>{company}</Text>
-        <Text>{description}</Text>
+      <View style={styles.flexStart}>
+        <Image source={icon} style={[styles.templateIcon, iconStyle]} />
+        <View style={styles.textWrapper}>
+          <Text style={styles.company}>{company}</Text>
+          <Text style={styles.description}>{description}</Text>
+        </View>
       </View>
       <Image source={arrowNext} style={styles.arrowNext} />
     </View>

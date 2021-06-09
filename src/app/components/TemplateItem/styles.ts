@@ -1,3 +1,4 @@
+import fonts from 'constants/fonts'
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -21,6 +22,25 @@ const styles = StyleSheet.create({
   arrowNext: {
     width: 8,
     height: 12,
+  },
+  flexStart: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  textWrapper: {
+    marginLeft: 30,
+  },
+  company: {
+    ...fonts.normal,
+    fontSize: 12,
+    lineHeight: 14,
+    color: '#000000',
+  },
+  description: {
+    ...fonts.light,
+    fontSize: 10,
+    lineHeight: 12,
+    color: '#000000',
   },
 })
 
