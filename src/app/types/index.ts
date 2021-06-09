@@ -55,7 +55,9 @@ export type AppStackParamList = {
   Login: undefined
   CardPayment: undefined
   PaymentResult: { isSuccessful?: boolean }
-  NotificationsAndPayments: undefined
+  NotificationsAndPayments?: {
+    notifications?: boolean
+  }
   AddAddress: undefined
   NotificationTemplates: undefined
   NotificationBigItem: undefined
@@ -127,4 +129,12 @@ export interface ICounterItem {
   personalAccount: string
   counterState: number
   newCounterState: number
+}
+
+export interface INotification {
+  company: string
+  description: string
+  icon: ImageSourcePropType
+  body: string
+  sum: string
 }
