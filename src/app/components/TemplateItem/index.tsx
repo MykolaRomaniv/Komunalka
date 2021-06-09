@@ -12,11 +12,12 @@ import {
 
 import styles from './styles'
 
-interface TemplateItemProps {
+export interface TemplateItemProps {
   icon: ImageSourcePropType
   iconStyle?: StyleProp<ImageStyle>
   company: string
   description: string
+  onPress: () => void
 }
 
 const TemplateItem = ({
@@ -24,8 +25,9 @@ const TemplateItem = ({
   company,
   description,
   iconStyle,
+  onPress,
 }: TemplateItemProps) => (
-  <Touchable>
+  <Touchable onPress={onPress}>
     <View style={styles.container}>
       <Image source={icon} style={[styles.templateIcon, iconStyle]} />
       <View>
