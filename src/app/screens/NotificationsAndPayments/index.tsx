@@ -16,7 +16,7 @@ const NotificationsAndPayments = ({
 }: NotificationsAndPaymentsProps) => (
   <SafeAreaView style={{ flex: 1 }}>
     <Header navigation={navigation}>{'Оплата комунальних'}</Header>
-    <ContentView />
+    <ContentView navigation={navigation} />
     <FooterMenu navigation={navigation} />
   </SafeAreaView>
 )
