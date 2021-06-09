@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     elevation: 4,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    marginBottom: 20,
   },
   tab: {
     flex: 1,
