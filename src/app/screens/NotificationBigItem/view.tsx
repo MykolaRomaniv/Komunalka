@@ -43,7 +43,11 @@ const ContentView = ({ navigation: { navigate } }: ContentViewProps) => (
           <Text>{'50'}</Text>
         </View>
       </View>
-      <Button onPress={() => navigate('NotificationsAndPayments')}>
+      <Button
+        onPress={() =>
+          navigate('NotificationsAndPayments', { notifications: true })
+        }
+      >
         {'Зберегти нагадування'}
       </Button>
     </View>
