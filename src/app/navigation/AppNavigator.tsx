@@ -11,7 +11,9 @@ import CardPayment from 'screens/CardPayment'
 import Counters from 'screens/Counters'
 import Login from 'screens/Login'
 import Main from 'screens/Main'
+import NotificationBigItem from 'screens/NotificationBigItem'
 import NotificationsAndPayments from 'screens/NotificationsAndPayments'
+import NotificationTemplates from 'screens/NotificationTemplates'
 import Payment from 'screens/Payment'
 import PaymentResult from 'screens/PaymentResult'
 import Registration from 'screens/Registration'
@@ -49,6 +51,14 @@ const AppNavigator = () => (
         component={NotificationsAndPayments}
       />
       <Stack.Screen name="AddAddress" component={AddAddress} />
+      <Stack.Screen
+        name="NotificationTemplates"
+        component={NotificationTemplates}
+      />
+      <Stack.Screen
+        name="NotificationBigItem"
+        component={NotificationBigItem}
+      />
     </Stack.Navigator>
   </NavigationContainer>
 )
