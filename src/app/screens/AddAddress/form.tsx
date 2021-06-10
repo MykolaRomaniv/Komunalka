@@ -1,6 +1,7 @@
 import Input from 'components/Input'
 import React from 'react'
 import { View } from 'react-native'
+import { numberValidate } from 'services/validation'
 
 import styles from './styles'
 
@@ -34,12 +35,14 @@ const Form = () => (
         placeholder="24175"
         label="Корпус"
         style={styles.corpus}
+        validate={numberValidate}
       />
       <Input
         name="homeNumber"
         placeholder="89"
         label="Квартира"
         style={styles.homeNumber}
+        validate={numberValidate}
         required
       />
     </View>
