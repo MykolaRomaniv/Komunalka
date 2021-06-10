@@ -8,14 +8,30 @@ import { Switch } from 'react-native-gesture-handler'
 
 import styles from '../shared'
 
-const PaymentItem = () => {
+export interface PaymentItemProps {
+  company: string
+  utilityType: string
+  personalAccount: string
+  toPay: string
+  wantToPay: string
+  wilBePayed: string
+}
+
+const PaymentItem = ({
+  company,
+  utilityType,
+  personalAccount,
+  wantToPay,
+  toPay,
+  wilBePayed,
+}: PaymentItemProps) => {
   const toggle = useToggle()
 
   return (
     <Touchable style={styles.container}>
       <View>
-        <Text style={styles.organizationName}>{'КП “Львівводоканал”'}</Text>
-        <Text style={styles.serviceName}>{'хол. вода і відведення'}</Text>
+        <Text style={styles.organizationName}>{company}</Text>
+        <Text style={styles.serviceName}>{utilityType}</Text>
         <Switch
           trackColor={{ true: colors.blueRibbon, false: '#767577' }}
           thumbColor={toggle.value ? colors.white : '#f4f3f4'}
@@ -32,13 +48,13 @@ const PaymentItem = () => {
           <Text style={styles.leftText}>{'Нарахування'}</Text>
         </View>
         <View style={styles.column}>
-          <Text style={styles.rightText}>{'670000080671'}</Text>
-          <Text style={styles.rightText}>{'200,00'}</Text>
+          <Text style={styles.rightText}>{personalAccount}</Text>
+          <Text style={styles.rightText}>{toPay}</Text>
           <View style={styles.editableContainer}>
-            <Text style={styles.newCounter}>{'195,30'}</Text>
+            <Text style={styles.newCounter}>{wantToPay}</Text>
             <Image source={pen} style={styles.penIcon} />
           </View>
-          <Text style={styles.rightText}>{'195,30'}</Text>
+          <Text style={styles.rightText}>{wilBePayed}</Text>
         </View>
       </View>
     </Touchable>
