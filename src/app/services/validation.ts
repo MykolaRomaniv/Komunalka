@@ -13,33 +13,33 @@ export const isPhone = (value: string) => phoneRegex.test(value)
 export const hasNoSpaces = (value: string) => noSpacesRegex.test(value)
 
 export const requiredValidate: Validator = (value: string | undefined) =>
-  value ? undefined : '*required'
+  value ? undefined : `Обов'язково`
 
 export const emailValidate: Validator = (value: string | undefined) =>
   !value || isEmail(value || '')
     ? undefined
-    : 'Please enter a valid email address'
+    : 'Будь ласка, введіть правильний емейл'
 
 export const numberValidate: Validator = (value: string | undefined) =>
-  !value || isNumber(value || '') ? undefined : 'Should be a number'
+  !value || isNumber(value || '') ? undefined : 'Тільки цифри'
 
 export const phoneValidate: Validator = (value: string | undefined) =>
   !value || isPhone(value || '')
     ? undefined
-    : 'Oops! Please enter a complete phone number'
+    : 'Будь ласка, введіть правильний номер'
 
 export const minLengthValidate: (len: number) => Validator =
   (len: number) => (value: string | undefined) =>
     !value || (value && value.length >= len)
       ? undefined
-      : `Should have at least ${len} symbols`
+      : `Мінімум ${len} символів`
 
 export const maxLengthValidate: (len: number) => Validator =
   (len: number) => (value: string | undefined) =>
-    value && value.length > len ? `Maximum ${len} symbols` : undefined
+    value && value.length > len ? `Максимум ${len} символів` : undefined
 
 export const noSpacesValidate: Validator = (value: string | undefined) =>
-  hasNoSpaces(value || '') ? undefined : 'Can`t include spaces'
+  hasNoSpaces(value || '') ? undefined : 'Не може містити пробілів'
 
 export const isDevCard = (inputtxt: string) => __DEV__ && /^4242/.test(inputtxt)
 
@@ -87,7 +87,7 @@ export const CreditCardNumberValidate: Validator = (
   } else if (isDevCard(cardNumber)) {
     cardType = 'develop'
   }
-  return cardType ? undefined : 'Invalid card number'
+  return cardType ? undefined : 'Неправильний номер карти'
 }
 
 export const expirityDateValidate: Validator = (value: string | undefined) => {
@@ -106,14 +106,14 @@ export const expirityDateValidate: Validator = (value: string | undefined) => {
   const year = now.getFullYear() % 100
   const month = now.getMonth() + 1
   if (year > inputYear) {
-    return 'Please enter a valid year'
+    return 'Введіть правильний рік'
   }
   if (
     (year === inputYear && month > inputMonth) ||
     inputMonth < 1 ||
     inputMonth > 12
   ) {
-    return 'Please enter a valid month'
+    return 'Введіть правильний місяць'
   }
   return undefined
 }
