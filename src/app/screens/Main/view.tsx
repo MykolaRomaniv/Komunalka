@@ -7,7 +7,9 @@ import paymentHome from 'assets/icons/paymentHome.png'
 import statisticsHome from 'assets/icons/statisticsHome.png'
 import PaymentSection from 'common/PaymentSection'
 import MainMenuItems from 'components/MainMenuItems'
-import PaymentHistoryItem from 'components/PaymentHistoryItem'
+import PaymentHistoryItem, {
+  PaymentHistoryItemProps,
+} from 'components/PaymentHistoryItem'
 import React from 'react'
 import { Text, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
@@ -54,6 +56,21 @@ const MENU_ITEMS: MenuItem[] = [
   },
 ]
 
+const PAYMENT_HISTORY_ITEMS: PaymentHistoryItemProps[] = [
+  {
+    bankName: 'КФ ПАТ КБП”ПРИВАТБАНК”',
+    payer: 'Григорак Ілона Анатоліївна',
+    paymentDate: '20.04.2021',
+    processDate: '21.04.2021',
+  },
+  {
+    bankName: 'КФ ПАТ КБП”ПРИВАТБАНК”',
+    payer: 'Григорак Ілона Анатоліївна',
+    paymentDate: '20.05.2021',
+    processDate: '21.05.2021',
+  },
+]
+
 interface ContentViewProps {
   navigation: StackNavigationProp<AppStackParamList, 'Main'>
 }
@@ -74,10 +91,15 @@ const ContentView = ({ navigation: { navigate } }: ContentViewProps) => (
       ))}
     </View>
     <Text style={styles.paymentHistoryTitle}>{'Історія платежів:'}</Text>
-    <PaymentHistoryItem />
-    <PaymentHistoryItem />
-    <PaymentHistoryItem />
-    <PaymentHistoryItem />
+    {PAYMENT_HISTORY_ITEMS.map((item, i) => (
+      <PaymentHistoryItem
+        key={i}
+        bankName={item.bankName}
+        payer={item.payer}
+        paymentDate={item.paymentDate}
+        processDate={item.processDate}
+      />
+    ))}
   </ScrollView>
 )
 
