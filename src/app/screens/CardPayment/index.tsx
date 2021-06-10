@@ -33,7 +33,7 @@ const connector = connect(mapStateToProps, mapDispatchToProps)
 type IProps = StackScreenProps<AppStackParamList, 'CardPayment'> &
   ConnectedProps<typeof connector>
 
-const sum = 583.6
+const sum = 899.3
 
 const CardPayment: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
   initialize,
