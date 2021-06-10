@@ -33,6 +33,7 @@ const Login: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
   authActions: { updateUser },
   values,
   valid,
+  navigation: { navigate },
 }) => {
   useEffect(() => {
     initialize({
@@ -43,7 +44,8 @@ const Login: React.FC<InjectedFormProps<IFormData, IProps> & IProps> = ({
 
   const save = () => {
     const data = { ...values } as Partial<UserData>
-    updateUser({ ...user, user: { ...data } })
+    updateUser({ user: { ...user, ...data } })
+    navigate('Main')
   }
 
   return <ContentView save={save} valid={valid} />
