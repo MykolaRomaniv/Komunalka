@@ -1,6 +1,7 @@
 import colors from 'constants/colors'
 import fonts from 'constants/fonts'
 import { StyleSheet } from 'react-native'
+import { vw } from 'services/dimensions'
 
 const styles = StyleSheet.create({
   page: {
@@ -100,6 +101,14 @@ const styles = StyleSheet.create({
   serviceFooter: {
     backgroundColor: colors.dodgerBlue,
     height: 67,
+  },
+  chart: {
+    marginTop: 35,
+    marginRight: 15,
+    width: vw(100),
+    height: '40%',
+    alignSelf: 'center',
+    // backgroundColor: 'red',
   },
 })
 
