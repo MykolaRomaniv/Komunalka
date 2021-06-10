@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     // box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15),
     elevation: 3,
     borderRadius: 45,
-    paddingLeft: 10,
+    paddingLeft: 20,
     paddingRight: 30,
     marginTop: '20%',
   },
