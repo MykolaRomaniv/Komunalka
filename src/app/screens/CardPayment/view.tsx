@@ -23,7 +23,9 @@ const ContentView = ({ save, valid, sum }: ContentViewProps) => (
       <View style={styles.content}>
         <Text style={styles.title}>{'Платіжна картка:'}</Text>
         <Form />
-        <Button disabled={!valid} onPress={save}>{`Сплатити ${sum}`}</Button>
+        <Button disabled={!valid} onPress={save}>{`Сплатити ${sum.toFixed(
+          2,
+        )}`}</Button>
       </View>
     </View>
   </KeyboardAwareScrollView>
