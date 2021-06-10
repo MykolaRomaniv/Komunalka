@@ -20,16 +20,17 @@ import { AppStackParamList } from 'types'
 
 import styles from './styles'
 
-interface FooterItem {
+interface IFooterItem {
   text: string
   screenName: keyof AppStackParamList
+  screenProp?: any
   icon: ImageSourcePropType
   selectedIcon: ImageSourcePropType
   iconStyle: StyleProp<ImageStyle>
   selected?: boolean
 }
 
-const FOOTER_ITEMS: FooterItem[] = [
+const FOOTER_ITEMS: IFooterItem[] = [
   {
     icon: home,
     selectedIcon: homeSelected,
@@ -37,6 +38,9 @@ const FOOTER_ITEMS: FooterItem[] = [
     screenName: 'Main',
     text: 'Головна',
     selected: true,
+    screenProp: {
+      withHistory: true,
+    },
   },
   {
     icon: counter,
@@ -63,7 +67,7 @@ const FOOTER_ITEMS: FooterItem[] = [
     icon: autoPayments,
     selectedIcon: autoPaymentsSelected,
     iconStyle: styles.autoPaymentsIcon,
-    screenName: 'NotificationsAndPayments',
+    screenName: 'AutoPayments',
     text: 'Автоплатежі',
   },
   {
@@ -95,7 +99,7 @@ const FooterMenu = ({ navigation: { navigate } }: FooterMenuProps) => (
         iconStyle={item.iconStyle}
         text={item.text}
         selected={item.selected}
-        onPress={() => navigate(item.screenName)}
+        onPress={() => navigate(item.screenName, item?.screenProp)}
       />
     ))}
   </View>
