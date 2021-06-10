@@ -1,31 +1,4 @@
-import { IAddressItem, ICounterItem } from 'types'
-
-export const ADDRESSES: IAddressItem[] = [
-  // {
-  //   address: 'Вулиця Лукаша, 54, 6',
-  //   city: 'м. Львів',
-  // },
-  // {
-  //   address: 'Вулиця Лукаша, 54, 7',
-  //   city: 'м. Львів',
-  // },
-  // {
-  //   address: 'Вулиця Лукаша, 54, 8',
-  //   city: 'м. Львів',
-  // },
-  // {
-  //   address: 'Вулиця Лукаша, 54, 9',
-  //   city: 'м. Львів',
-  // },
-  // {
-  //   address: 'Вулиця Лукаша, 54, 10',
-  //   city: 'м. Львів',
-  // },
-  // {
-  //   address: 'Вулиця Лукаша, 54, 11',
-  //   city: 'м. Львів',
-  // },
-]
+import { ICounterItem } from 'types'
 
 export const COUNTERS: ICounterItem[] = [
   {
@@ -36,24 +9,19 @@ export const COUNTERS: ICounterItem[] = [
     newCounterState: 54617,
   },
   {
-    companyName: 'КП “Львівводоканал”',
-    utilityType: 'хол. вода і відведення',
-    personalAccount: '670000080672',
-    counterState: 54500,
-    newCounterState: 54617,
+    companyName: 'КП “ЛьвівСвітло”',
+    utilityType: 'електропостачання',
+    personalAccount: '480052080600',
+    counterState: 68000,
+    newCounterState: 68152,
   },
   {
-    companyName: 'КП “Львівводоканал”',
-    utilityType: 'хол. вода і відведення',
-    personalAccount: '670000080673',
-    counterState: 54500,
-    newCounterState: 54617,
-  },
-  {
-    companyName: 'КП “Львівводоканал”',
-    utilityType: 'хол. вода і відведення',
-    personalAccount: '670000080674',
-    counterState: 54500,
-    newCounterState: 54617,
+    companyName: 'КП “ЛьвівГаз”',
+    utilityType: 'опалення',
+    personalAccount: '50490051667',
+    counterState: 140500,
+    newCounterState: 140556,
   },
 ]
+
+export default { COUNTERS }
