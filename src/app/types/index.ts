@@ -46,7 +46,9 @@ export type IError<T = { errors: string[] }> =
   | IBackendError
 
 export type AppStackParamList = {
-  Main: undefined
+  Main?: {
+    withHistory: boolean
+  }
   Addresses: undefined
   Counters: undefined
   Statistic: undefined
@@ -61,6 +63,9 @@ export type AppStackParamList = {
   AddAddress: undefined
   NotificationTemplates: undefined
   NotificationBigItem: undefined
+  AutoPayments: undefined
+  AutoPaymentsTemplates: undefined
+  AutoPaymentBigItem: undefined
 }
 
 export type AnimatedViewStyle =

@@ -7,6 +7,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import AddAddress from 'screens/AddAddress'
 import Addresses from 'screens/Addresses'
+import AutoPaymentBigItem from 'screens/AutoPaymentBigItem'
+import AutoPayments from 'screens/AutoPayments'
+import AutoPaymentsTemplates from 'screens/AutoPaymentsTemplates'
 import CardPayment from 'screens/CardPayment'
 import Counters from 'screens/Counters'
 import Login from 'screens/Login'
@@ -36,6 +39,7 @@ const AppNavigator = () => (
         headerShown: false,
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
       }}
+      initialRouteName="Login"
     >
       <Stack.Screen name="Main" component={Main} />
       <Stack.Screen name="Addresses" component={Addresses} />
@@ -58,6 +62,12 @@ const AppNavigator = () => (
       <Stack.Screen
         name="NotificationBigItem"
         component={NotificationBigItem}
+      />
+      <Stack.Screen name="AutoPaymentBigItem" component={AutoPaymentBigItem} />
+      <Stack.Screen name="AutoPayments" component={AutoPayments} />
+      <Stack.Screen
+        name="AutoPaymentsTemplates"
+        component={AutoPaymentsTemplates}
       />
     </Stack.Navigator>
   </NavigationContainer>
