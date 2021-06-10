@@ -14,7 +14,7 @@ interface CountersProps {
 const Counters = ({ navigation }: CountersProps) => (
   <SafeAreaView style={{ flex: 1 }}>
     <Header navigation={navigation}>{'Показники лічильників'}</Header>
-    <ContentView />
+    <ContentView onSendPress={() => navigation.navigate('Main')} />
     <FooterMenu navigation={navigation} />
   </SafeAreaView>
 )

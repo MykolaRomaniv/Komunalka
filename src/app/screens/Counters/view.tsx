@@ -10,7 +10,11 @@ import { ScrollView } from 'react-native-gesture-handler'
 
 import styles from './styles'
 
-const ContentView = () => (
+interface ContentViewProps {
+  onSendPress: () => void
+}
+
+const ContentView = ({ onSendPress }: ContentViewProps) => (
   <ScrollView
     style={styles.page}
     contentContainerStyle={styles.contentContainer}
@@ -25,7 +29,7 @@ const ContentView = () => (
     {COUNTERS.map((item) => (
       <CountersItem key={item.personalAccount} item={item} />
     ))}
-    <Button onPress={() => undefined}>{'Надіслати'}</Button>
+    <Button onPress={onSendPress}>{'Надіслати'}</Button>
   </ScrollView>
 )
 
