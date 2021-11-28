@@ -1,19 +1,24 @@
-import Diagram from 'assets/icons/diagram.png'
 import Touchable from 'components/Touchable'
 import React from 'react'
-import { Image, Text } from 'react-native'
+import { Image, Text, View } from 'react-native'
+import { MenuItem } from 'types'
 
 import styles from './styles'
 
 interface MainMenuItemsProps {
-  title: string
   onPress: () => void
+  item: MenuItem
 }
 
-const MainMenuItems = ({ title, onPress }: MainMenuItemsProps) => (
+const MainMenuItems = ({
+  item: { icon, iconStyle, title },
+  onPress,
+}: MainMenuItemsProps) => (
   <Touchable style={styles.container} onPress={onPress}>
-    <Image source={Diagram} style={styles.icon} />
-    <Text>{title}</Text>
+    <Image source={icon} style={[styles.icon, iconStyle]} />
+    <View style={styles.textWrapper}>
+      <Text style={styles.text}>{title}</Text>
+    </View>
   </Touchable>
 )
 

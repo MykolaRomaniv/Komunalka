@@ -6,13 +6,18 @@ import LinearGradient from 'react-native-linear-gradient'
 
 import styles from './styles'
 
-const UserCircle = () => (
-  <Touchable>
+interface UserCircleProps {
+  onPress: () => void
+  userInitials?: string
+}
+
+const UserCircle = ({ onPress, userInitials }: UserCircleProps) => (
+  <Touchable onPress={onPress}>
     <LinearGradient
       colors={[colors.electricViolet, colors.torchRed]}
       style={styles.userCircle}
     >
-      <Text style={styles.userCircleText}>{'NA'}</Text>
+      <Text style={styles.userCircleText}>{userInitials || 'NA'}</Text>
     </LinearGradient>
   </Touchable>
 )

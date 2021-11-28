@@ -1,5 +1,6 @@
 import configureStore, { IConfigureStore } from 'boot/configureStore'
 import React from 'react'
+import { Provider as PaperProvider } from 'react-native-paper'
 import { RootSiblingParent } from 'react-native-root-siblings'
 import { Provider } from 'react-redux'
 import { Store } from 'redux'
@@ -35,7 +36,9 @@ class Setup extends React.Component<IConfigureStore, IState> {
       <PersistGate loading={null} persistor={persistor}>
         <Provider store={store}>
           <RootSiblingParent>
-            <App />
+            <PaperProvider>
+              <App />
+            </PaperProvider>
           </RootSiblingParent>
         </Provider>
       </PersistGate>

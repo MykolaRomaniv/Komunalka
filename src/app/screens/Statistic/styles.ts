@@ -1,6 +1,7 @@
 import colors from 'constants/colors'
 import fonts from 'constants/fonts'
 import { StyleSheet } from 'react-native'
+import { vw } from 'services/dimensions'
 
 const styles = StyleSheet.create({
   page: {
@@ -11,7 +12,7 @@ const styles = StyleSheet.create({
     height: '50%',
   },
   rowTitle: {
-    fontFamily: 'Source Sans Pro',
+    fontFamily: 'SourceSansPro-ExtraLightItalic',
     fontStyle: 'italic',
     fontWeight: '200',
     fontSize: 12,
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
     elevation: 3,
     borderRadius: 45,
     marginTop: -45,
-    paddingBottom: 45,
+    overflow: 'hidden',
   },
   month: {
     ...fonts.medium,
@@ -86,7 +87,28 @@ const styles = StyleSheet.create({
   },
   amountRow: {
     flexDirection: 'row',
-    // alignItems: 'flex-end',
+    marginLeft: 8,
+  },
+  upDownRow: {
+    flexDirection: 'row',
+    marginRight: 10,
+    marginBottom: 4,
+  },
+  arrowUpRed: {
+    width: 28,
+    height: 16,
+  },
+  serviceFooter: {
+    backgroundColor: colors.dodgerBlue,
+    height: 67,
+  },
+  chart: {
+    marginTop: 35,
+    marginRight: 15,
+    width: vw(100),
+    height: '40%',
+    alignSelf: 'center',
+    // backgroundColor: 'red',
   },
 })
 

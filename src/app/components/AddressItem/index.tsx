@@ -1,28 +1,26 @@
-import addressIcon from 'assets/icons/address.png'
-import selectedAddress from 'assets/icons/selectedAddress.png'
-import Touchable from 'components/Touchable'
+import selectedAddress from 'assets/icons/mapPinSelected.png'
 import React from 'react'
 import { Image, Text, View } from 'react-native'
+import { IAddressItem } from 'types'
 
 import styles from './styles'
 
 interface AddressItemProps {
-  selected?: boolean
-  address: string
-  city: string
+  item: IAddressItem
 }
 
-const AddressItem = ({ selected, address, city }: AddressItemProps) => (
-  <Touchable style={styles.container} activeOpacity={0.87}>
-    <Image
-      source={selected ? selectedAddress : addressIcon}
-      style={styles.icon}
-    />
+const AddressItem = ({
+  item: { city, street, homeNumber, corpus },
+}: AddressItemProps) => (
+  <View style={styles.container}>
+    <Image source={selectedAddress} style={styles.icon} />
     <View>
-      <Text style={styles.addressText}>{address}</Text>
+      <Text style={styles.addressText}>
+        {`Вулиця ${street}, ${homeNumber}, ${corpus}`}
+      </Text>
       <Text style={styles.cityText}>{city}</Text>
     </View>
-  </Touchable>
+  </View>
 )
 
 export default AddressItem

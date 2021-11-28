@@ -1,15 +1,21 @@
 import colors from 'constants/colors'
+import fonts from 'constants/fonts'
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 10,
+    paddingBottom: 10,
+    backgroundColor: '#fff',
+    // TODO
+    // position: 'absolute',
+    top: 0,
+    zIndex: 1,
+    width: '100%',
   },
   headerText: {
-    fontFamily: 'Rubik-Light',
-    fontWeight: '300',
+    ...fonts.light,
     fontSize: 20,
     lineHeight: 26,
     opacity: 0.87,

@@ -8,7 +8,7 @@ import styles from './styles'
 const PaymentSection = () => (
   <View style={styles.paymentSection}>
     <LinearGradient
-      colors={[colors.orangeWhite, colors.orangePeel, colors.transparent]}
+      colors={[colors.orangePeel, colors.transparent]}
       style={styles.payToContainer}
     >
       <Text style={styles.payToText}>{'Сплатити до:'}</Text>

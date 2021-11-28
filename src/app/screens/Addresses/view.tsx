@@ -1,32 +1,49 @@
-import addressesBg from 'assets/addressesBg.png'
+import { StackNavigationProp } from '@react-navigation/stack'
 import add from 'assets/icons/add.png'
-import trash from 'assets/icons/trash.png'
-import Header from 'common/Header'
+import mapBg from 'assets/mapBg.png'
+import NoAddresses from 'common/NoAddresses'
+import SwipableList from 'common/SwipableList'
 import AddressItem from 'components/AddressItem'
 import Touchable from 'components/Touchable'
 import React from 'react'
-import { Image, ImageBackground, View } from 'react-native'
-import { ScrollView } from 'react-native-gesture-handler'
+import { Image, View } from 'react-native'
+import { AppStackParamList, IAddressItem } from 'types'
 
 import styles from './styles'
 
-const ContentView = () => (
-  <ScrollView style={styles.page}>
-    <Header>{'Адреси'}</Header>
-    <ImageBackground source={addressesBg} style={styles.background}>
-      <View style={styles.iconsRow}>
-        <Touchable>
-          <Image source={trash} style={styles.trashIcon} />
-        </Touchable>
-        <Touchable>
-          <Image source={add} style={styles.addIcon} />
-        </Touchable>
-      </View>
-      <AddressItem address="Вулиця Лукаша, 54, 8" city="м. Львів" selected />
-      <AddressItem address="Вулиця Лукаша, 54, 8" city="м. Львів" />
-      <AddressItem address="Вулиця Лукаша, 54, 8" city="м. Львів" />
-    </ImageBackground>
-  </ScrollView>
+interface ContentViewProps {
+  navigation: StackNavigationProp<AppStackParamList, 'Addresses'>
+  addresses: IAddressItem[]
+  onDelete: (newAddresses: IAddressItem[]) => void
+}
+
+const ContentView = ({
+  navigation: { navigate },
+  addresses,
+  onDelete,
+}: ContentViewProps) => (
+  <View style={styles.page}>
+    <Image source={mapBg} style={styles.map} />
+    <View style={styles.iconsRow}>
+      <Touchable onPress={() => navigate('AddAddress')}>
+        <Image source={add} style={styles.addIcon} />
+      </Touchable>
+    </View>
+    {addresses.length ? (
+      <SwipableList
+        data={addresses.map((address) => ({
+          ...address,
+          key: `${address.street},${address.homeNumber}`,
+        }))}
+        renderItem={(item) => (
+          <AddressItem item={item.item as unknown as IAddressItem} />
+        )}
+        onDelete={(item) => onDelete(item as unknown as IAddressItem[])}
+      />
+    ) : (
+      <NoAddresses onPress={() => navigate('AddAddress')} />
+    )}
+  </View>
 )
 
 export default ContentView

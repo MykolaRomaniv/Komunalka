@@ -1,4 +1,5 @@
 import colors from 'constants/colors'
+import fonts from 'constants/fonts'
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -15,22 +16,20 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   bankName: {
-    fontFamily: 'Rubik-Light',
-    fontWeight: '300',
+    ...fonts.light,
     fontSize: 12,
     lineHeight: 14,
     color: colors.black,
   },
   leftText: {
-    fontFamily: 'Rubik-Regular',
+    ...fonts.normal,
     fontSize: 12,
     lineHeight: 14,
     color: colors.black,
     marginBottom: 8,
   },
   rightText: {
-    fontFamily: 'Rubik-Light',
-    fontWeight: '300',
+    ...fonts.light,
     fontSize: 12,
     lineHeight: 14,
     color: colors.black,
@@ -40,6 +39,7 @@ const styles = StyleSheet.create({
   columns: {
     justifyContent: 'space-between',
     flexDirection: 'row',
+    marginBottom: 15,
   },
 })
 

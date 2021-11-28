@@ -1,4 +1,5 @@
 import colors from 'constants/colors'
+import fonts from 'constants/fonts'
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -12,8 +13,7 @@ const styles = StyleSheet.create({
     marginRight: 26,
   },
   userCircleText: {
-    fontFamily: 'Inter',
-    fontWeight: '500',
+    ...fonts.medium,
     fontSize: 20,
     lineHeight: 26,
     color: colors.white,

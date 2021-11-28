@@ -1,4 +1,5 @@
 import colors from 'constants/colors'
+import fonts from 'constants/fonts'
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -15,22 +16,39 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     marginBottom: 40,
-    marginLeft: 19,
-  },
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '100%',
-    paddingRight: 40,
+    marginHorizontal: 19,
   },
   paymentHistoryTitle: {
-    fontFamily: 'Rubik-Medium',
-    fontWeight: '500',
+    ...fonts.medium,
     fontSize: 14,
     lineHeight: 18,
     color: colors.black,
     opacity: 0.87,
     marginLeft: 19,
+  },
+  paymentIcon: {
+    width: 19,
+    height: 15,
+  },
+  statisticsIcon: {
+    width: 24,
+    height: 17,
+  },
+  notificationIcon: {
+    width: 17,
+    height: 20,
+  },
+  autoPaymentIcon: {
+    width: 19,
+    height: 17,
+  },
+  addressIcon: {
+    width: 18,
+    height: 19,
+  },
+  counterIcon: {
+    width: 21,
+    height: 20,
   },
 })
 

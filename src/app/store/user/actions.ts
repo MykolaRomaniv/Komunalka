@@ -1,8 +1,9 @@
 import { GoogleSignin, User } from '@react-native-community/google-signin'
+import { DeepPartial } from 'redux'
 import notify from 'services/notify'
 // eslint-disable-next-line import/no-named-as-default
 import action from 'store/action'
-import { AppThunkAsync, IError } from 'types/index'
+import { AppThunkAsync, IAddressItem, IError } from 'types/index'
 
 import ActionType from './types'
 
@@ -47,7 +48,7 @@ export const googleSignOut =
   }
 
 export const updateUser =
-  (user: User, onSuccess?: () => void): AppThunkAsync =>
+  (user: DeepPartial<User>, onSuccess?: () => void): AppThunkAsync =>
   async (dispatch) => {
     dispatch(action(ActionType.UPDATE_USER, user))
     onSuccess?.()
@@ -62,9 +63,25 @@ export const autoDetectSignOut =
     }
   }
 
+export const saveAddress =
+  (address: IAddressItem, onSuccess?: () => void): AppThunkAsync =>
+  async (dispatch) => {
+    dispatch(action(ActionType.SAVE_ADDRESS, address))
+    onSuccess?.()
+  }
+
+export const replaceAddresses =
+  (addresses: IAddressItem[], onSuccess?: () => void): AppThunkAsync =>
+  async (dispatch) => {
+    dispatch(action(ActionType.REPLACE_ADDRESSES, addresses))
+    onSuccess?.()
+  }
+
 export default {
   googleLogin,
   googleSignOut,
   updateUser,
   autoDetectSignOut,
+  saveAddress,
+  replaceAddresses,
 }
